@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Asn1.IsisMtt.X509;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,14 +38,20 @@ namespace cashier
             Login login = new Login();
             login.Show();
             Hide();
+            
 
         }
 
         private void barangToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddProduct product = new AddProduct();
-            product.Show();
-            this.Hide();
+            product.Show();                        
+            this.Enabled = false;
+        }
+
+        private void supplierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

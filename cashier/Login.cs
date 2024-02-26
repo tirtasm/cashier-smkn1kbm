@@ -20,11 +20,26 @@ namespace cashier
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Hide();
-            mainmenu mainmenu = new mainmenu();
-            mainmenu.Show();
+            //check koneksi ke database kirim pesan jika sudah terkoneksi
+            config conn = new config();
+            conn.buka();
+            MySqlConnection connection = conn.buka();
+            MySqlCommand cmd = connection.CreateCommand();
+            cmd.CommandText = "SELECT * FROM petugas WHERE nama = '" + tbUser.Text + "' AND password = '" + tbPass.Text + "'";
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                MessageBox.Show("Login Berhasil");
+                Hide();
+                mainmenu mainmenu = new mainmenu();
+                mainmenu.Show();
             }
-        }
+            else
+            {
+                MessageBox.Show("Login Gagal");
+            }
+            conn.tutup();
+}
 
 
         

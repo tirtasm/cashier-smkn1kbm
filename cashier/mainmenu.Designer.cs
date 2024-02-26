@@ -35,9 +35,6 @@
             this.masterDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.supplierToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportKeuntunganKantinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportKeuntunganKantinToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +48,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.masterDataToolStripMenuItem,
-            this.viewToolStripMenuItem,
             this.reportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -96,27 +92,7 @@
             this.supplierToolStripMenuItem.Name = "supplierToolStripMenuItem";
             this.supplierToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.supplierToolStripMenuItem.Text = "Add Supplier";
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.productToolStripMenuItem,
-            this.supplierToolStripMenuItem1});
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(85, 38);
-            this.viewToolStripMenuItem.Text = "View";
-            // 
-            // productToolStripMenuItem
-            // 
-            this.productToolStripMenuItem.Name = "productToolStripMenuItem";
-            this.productToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
-            this.productToolStripMenuItem.Text = "Product";
-            // 
-            // supplierToolStripMenuItem1
-            // 
-            this.supplierToolStripMenuItem1.Name = "supplierToolStripMenuItem1";
-            this.supplierToolStripMenuItem1.Size = new System.Drawing.Size(359, 44);
-            this.supplierToolStripMenuItem1.Text = "Supplier";
+            this.supplierToolStripMenuItem.Click += new System.EventHandler(this.supplierToolStripMenuItem_Click);
             // 
             // reportToolStripMenuItem
             // 
@@ -149,7 +125,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "mainmenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu | SMKN 1 Kebumen";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainmenu_FormClosing);
             this.Load += new System.EventHandler(this.mainmenu_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -166,9 +144,6 @@
         private System.Windows.Forms.ToolStripMenuItem masterDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem barangToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supplierToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem productToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem supplierToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportKeuntunganKantinToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportKeuntunganKantinToolStripMenuItem1;
