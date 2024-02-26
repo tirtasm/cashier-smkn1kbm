@@ -21,6 +21,7 @@ namespace cashier
         {
 
         }
+<<<<<<< HEAD
 
         private void b_exit_Click(object sender, EventArgs e)
         {
@@ -33,5 +34,7 @@ namespace cashier
         {
 
         }
+=======
+>>>>>>> 988a070edf3bda57943c4c1fc1ad65fa81d6c395
     }
 }

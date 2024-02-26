@@ -187,14 +187,21 @@
             this.b_exit.FlatAppearance.BorderSize = 0;
             this.b_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_exit.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD
             this.b_exit.Location = new System.Drawing.Point(54, 35);
+=======
+            this.b_exit.Location = new System.Drawing.Point(53, 35);
+>>>>>>> 988a070edf3bda57943c4c1fc1ad65fa81d6c395
             this.b_exit.Margin = new System.Windows.Forms.Padding(6);
             this.b_exit.Name = "b_exit";
             this.b_exit.Size = new System.Drawing.Size(112, 63);
             this.b_exit.TabIndex = 5;
             this.b_exit.Text = "Exit";
             this.b_exit.UseVisualStyleBackColor = false;
+<<<<<<< HEAD
             this.b_exit.Click += new System.EventHandler(this.b_exit_Click);
+=======
+>>>>>>> 988a070edf3bda57943c4c1fc1ad65fa81d6c395
             // 
             // b_delete
             // 
@@ -240,7 +247,10 @@
             this.b_simpan.TabIndex = 0;
             this.b_simpan.Text = "Simpan";
             this.b_simpan.UseVisualStyleBackColor = false;
+<<<<<<< HEAD
             this.b_simpan.Click += new System.EventHandler(this.b_simpan_Click);
+=======
+>>>>>>> 988a070edf3bda57943c4c1fc1ad65fa81d6c395
             // 
             // panel1
             // 
@@ -301,13 +311,21 @@
             this.textBox6.Size = new System.Drawing.Size(436, 39);
             this.textBox6.TabIndex = 69;
             // 
+<<<<<<< HEAD
             // AddProduct
+=======
+            // Product
+>>>>>>> 988a070edf3bda57943c4c1fc1ad65fa81d6c395
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(2243, 1314);
+=======
+            this.ClientSize = new System.Drawing.Size(2243, 1025);
+>>>>>>> 988a070edf3bda57943c4c1fc1ad65fa81d6c395
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox3);
@@ -326,10 +344,17 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+<<<<<<< HEAD
             this.Name = "AddProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product | SMKN 1 KEBUMEN";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+=======
+            this.Name = "Product";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Product | SMKN 1 KEBUMEN";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+>>>>>>> 988a070edf3bda57943c4c1fc1ad65fa81d6c395
             this.Load += new System.EventHandler(this.Product_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

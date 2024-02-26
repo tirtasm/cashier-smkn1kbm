@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             this.SuspendLayout();
             // 
             // KeuntunganKantin
@@ -39,6 +40,12 @@
             this.Text = "KeuntunganKantin";
             this.ResumeLayout(false);
 
+=======
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "KeuntunganKantin";
+>>>>>>> 988a070edf3bda57943c4c1fc1ad65fa81d6c395
         }
 
         #endregion

@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+<<<<<<< HEAD
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -27,6 +28,8 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+=======
+>>>>>>> 988a070edf3bda57943c4c1fc1ad65fa81d6c395
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -170,12 +173,15 @@
     <Compile Include="ViewSupplier.Designer.cs">
       <DependentUpon>ViewSupplier.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="KeuntunganKantin.resx">
       <DependentUpon>KeuntunganKantin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Laporan.resx">
       <DependentUpon>Laporan.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> 988a070edf3bda57943c4c1fc1ad65fa81d6c395
     <EmbeddedResource Include="ViewProduk.resx">
       <DependentUpon>ViewProduk.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +223,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
@@ -229,5 +236,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+=======
+>>>>>>> 988a070edf3bda57943c4c1fc1ad65fa81d6c395
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

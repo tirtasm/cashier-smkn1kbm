@@ -18,6 +18,7 @@ namespace cashier
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
         private void button1_Click(object sender, EventArgs e)
         {
             //check koneksi ke database kirim pesan jika sudah terkoneksi
@@ -40,6 +41,16 @@ namespace cashier
             }
             conn.tutup();
 }
+=======
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Hide();
+            mainmenu mainmenu = new mainmenu();
+            mainmenu.Show();
+            
+        }
+>>>>>>> 988a070edf3bda57943c4c1fc1ad65fa81d6c395
 
 
         
