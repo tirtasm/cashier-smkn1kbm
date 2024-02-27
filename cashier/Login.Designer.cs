@@ -82,6 +82,7 @@
             this.tbUser.Name = "tbUser";
             this.tbUser.Size = new System.Drawing.Size(422, 41);
             this.tbUser.TabIndex = 4;
+            this.tbUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbUser_KeyDown);
             // 
             // tbPass
             // 
@@ -90,6 +91,7 @@
             this.tbPass.Name = "tbPass";
             this.tbPass.Size = new System.Drawing.Size(422, 41);
             this.tbPass.TabIndex = 5;
+            this.tbPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPass_KeyDown);
             // 
             // Login
             // 

@@ -16,11 +16,11 @@ namespace cashier
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new Login());
-=======
+
+             Application.Run(new Login());
+
             Application.Run(new AddProduct());
->>>>>>> 988a070edf3bda57943c4c1fc1ad65fa81d6c395
+
         }
     }
 }

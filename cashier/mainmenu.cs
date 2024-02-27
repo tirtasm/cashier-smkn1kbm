@@ -1,9 +1,9 @@
-<<<<<<< HEAD
+
 ﻿using Org.BouncyCastle.Asn1.IsisMtt.X509;
 using System;
-=======
+
 ﻿using System;
->>>>>>> 988a070edf3bda57943c4c1fc1ad65fa81d6c395
+
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,17 +42,13 @@ namespace cashier
             Login login = new Login();
             login.Show();
             Hide();
-<<<<<<< HEAD
-            
-=======
->>>>>>> 988a070edf3bda57943c4c1fc1ad65fa81d6c395
 
         }
 
         private void barangToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddProduct product = new AddProduct();
-<<<<<<< HEAD
+
             product.Show();                        
             this.Enabled = false;
         }
@@ -60,10 +56,10 @@ namespace cashier
         private void supplierToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-=======
-            product.Show();
+
+            
             this.Hide();
->>>>>>> 988a070edf3bda57943c4c1fc1ad65fa81d6c395
+
         }
     }
 }
