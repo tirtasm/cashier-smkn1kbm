@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddSupplier));
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.b_delete = new System.Windows.Forms.Button();
+            this.tbAlamat = new System.Windows.Forms.TextBox();
+            this.tbHp = new System.Windows.Forms.TextBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.b_exit = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.b_edit = new System.Windows.Forms.Button();
-            this.b_simpan = new System.Windows.Forms.Button();
-            this.t_cari = new System.Windows.Forms.TextBox();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnSimpan = new System.Windows.Forms.Button();
+            this.tbCari = new System.Windows.Forms.TextBox();
             this.table = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.tbNama = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,36 +50,36 @@
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox3
+            // tbAlamat
             // 
-            this.textBox3.Location = new System.Drawing.Point(304, 354);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(436, 79);
-            this.textBox3.TabIndex = 85;
+            this.tbAlamat.Location = new System.Drawing.Point(304, 354);
+            this.tbAlamat.Multiline = true;
+            this.tbAlamat.Name = "tbAlamat";
+            this.tbAlamat.Size = new System.Drawing.Size(436, 79);
+            this.tbAlamat.TabIndex = 85;
             // 
-            // textBox4
+            // tbHp
             // 
-            this.textBox4.Location = new System.Drawing.Point(304, 287);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(436, 39);
-            this.textBox4.TabIndex = 84;
+            this.tbHp.Location = new System.Drawing.Point(304, 287);
+            this.tbHp.Multiline = true;
+            this.tbHp.Name = "tbHp";
+            this.tbHp.Size = new System.Drawing.Size(436, 39);
+            this.tbHp.TabIndex = 84;
             // 
-            // b_delete
+            // btnDelete
             // 
-            this.b_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.b_delete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.b_delete.FlatAppearance.BorderSize = 0;
-            this.b_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_delete.ForeColor = System.Drawing.Color.White;
-            this.b_delete.Location = new System.Drawing.Point(492, 493);
-            this.b_delete.Margin = new System.Windows.Forms.Padding(6);
-            this.b_delete.Name = "b_delete";
-            this.b_delete.Size = new System.Drawing.Size(176, 63);
-            this.b_delete.TabIndex = 73;
-            this.b_delete.Text = "Delete";
-            this.b_delete.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(492, 493);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(6);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(176, 63);
+            this.btnDelete.TabIndex = 73;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -119,43 +119,44 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Tambah Supplier";
             // 
-            // b_edit
+            // btnEdit
             // 
-            this.b_edit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.b_edit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.b_edit.FlatAppearance.BorderSize = 0;
-            this.b_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_edit.ForeColor = System.Drawing.Color.White;
-            this.b_edit.Location = new System.Drawing.Point(304, 493);
-            this.b_edit.Margin = new System.Windows.Forms.Padding(6);
-            this.b_edit.Name = "b_edit";
-            this.b_edit.Size = new System.Drawing.Size(176, 63);
-            this.b_edit.TabIndex = 72;
-            this.b_edit.Text = "Edit";
-            this.b_edit.UseVisualStyleBackColor = false;
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(304, 493);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(6);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(176, 63);
+            this.btnEdit.TabIndex = 72;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
             // 
-            // b_simpan
+            // btnSimpan
             // 
-            this.b_simpan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.b_simpan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.b_simpan.FlatAppearance.BorderSize = 0;
-            this.b_simpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_simpan.ForeColor = System.Drawing.Color.White;
-            this.b_simpan.Location = new System.Drawing.Point(112, 493);
-            this.b_simpan.Margin = new System.Windows.Forms.Padding(6);
-            this.b_simpan.Name = "b_simpan";
-            this.b_simpan.Size = new System.Drawing.Size(176, 63);
-            this.b_simpan.TabIndex = 71;
-            this.b_simpan.Text = "Simpan";
-            this.b_simpan.UseVisualStyleBackColor = false;
+            this.btnSimpan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnSimpan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSimpan.FlatAppearance.BorderSize = 0;
+            this.btnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSimpan.ForeColor = System.Drawing.Color.White;
+            this.btnSimpan.Location = new System.Drawing.Point(112, 493);
+            this.btnSimpan.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSimpan.Name = "btnSimpan";
+            this.btnSimpan.Size = new System.Drawing.Size(176, 63);
+            this.btnSimpan.TabIndex = 71;
+            this.btnSimpan.Text = "Simpan";
+            this.btnSimpan.UseVisualStyleBackColor = false;
+            this.btnSimpan.Click += new System.EventHandler(this.b_simpan_Click);
             // 
-            // t_cari
+            // tbCari
             // 
-            this.t_cari.Location = new System.Drawing.Point(138, 32);
-            this.t_cari.Margin = new System.Windows.Forms.Padding(6);
-            this.t_cari.Name = "t_cari";
-            this.t_cari.Size = new System.Drawing.Size(330, 31);
-            this.t_cari.TabIndex = 0;
+            this.tbCari.Location = new System.Drawing.Point(138, 32);
+            this.tbCari.Margin = new System.Windows.Forms.Padding(6);
+            this.tbCari.Name = "tbCari";
+            this.tbCari.Size = new System.Drawing.Size(330, 31);
+            this.tbCari.TabIndex = 0;
             // 
             // table
             // 
@@ -175,7 +176,7 @@
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Silver;
             this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.t_cari);
+            this.groupBox3.Controls.Add(this.tbCari);
             this.groupBox3.Controls.Add(this.table);
             this.groupBox3.Location = new System.Drawing.Point(830, 197);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(6);
@@ -195,13 +196,13 @@
             this.label13.TabIndex = 43;
             this.label13.Text = "Cari";
             // 
-            // textBox5
+            // tbNama
             // 
-            this.textBox5.Location = new System.Drawing.Point(304, 219);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(436, 39);
-            this.textBox5.TabIndex = 87;
+            this.tbNama.Location = new System.Drawing.Point(304, 219);
+            this.tbNama.Multiline = true;
+            this.tbNama.Name = "tbNama";
+            this.tbNama.Size = new System.Drawing.Size(436, 39);
+            this.tbNama.TabIndex = 87;
             // 
             // label8
             // 
@@ -236,25 +237,25 @@
             this.label5.TabIndex = 77;
             this.label5.Text = "Nama";
             // 
-            // Supplier
+            // AddSupplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1846, 845);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.b_delete);
+            this.Controls.Add(this.tbAlamat);
+            this.Controls.Add(this.tbHp);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.b_edit);
-            this.Controls.Add(this.b_simpan);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnSimpan);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tbNama);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Supplier";
+            this.Name = "AddSupplier";
             this.Text = "Supplier | SMKN 1 Kebumen";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -267,19 +268,19 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button b_delete;
+        private System.Windows.Forms.TextBox tbAlamat;
+        private System.Windows.Forms.TextBox tbHp;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button b_exit;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button b_edit;
-        private System.Windows.Forms.Button b_simpan;
-        private System.Windows.Forms.TextBox t_cari;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnSimpan;
+        private System.Windows.Forms.TextBox tbCari;
         private System.Windows.Forms.DataGridView table;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox tbNama;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

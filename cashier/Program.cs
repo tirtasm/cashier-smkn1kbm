@@ -19,7 +19,7 @@ namespace cashier
 
              Application.Run(new Login());
 
-            Application.Run(new AddProduct());
+            
 
         }
     }

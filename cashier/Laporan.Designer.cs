@@ -135,6 +135,7 @@
             this.b_exit.TabIndex = 5;
             this.b_exit.Text = "Exit";
             this.b_exit.UseVisualStyleBackColor = false;
+            this.b_exit.Click += new System.EventHandler(this.b_exit_Click);
             // 
             // label14
             // 
@@ -177,6 +178,7 @@
             this.b_simpan.TabIndex = 71;
             this.b_simpan.Text = "Simpan";
             this.b_simpan.UseVisualStyleBackColor = false;
+            this.b_simpan.Click += new System.EventHandler(this.b_simpan_Click);
             // 
             // t_cari
             // 

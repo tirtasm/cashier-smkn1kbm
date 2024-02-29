@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace cashier
 {
@@ -14,7 +15,18 @@ namespace cashier
     {
         public Laporan()
         {
+            config conn = new config();
             InitializeComponent();
+        }
+
+        private void b_simpan_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void b_exit_Click(object sender, EventArgs e)
+        {
+            Hide();
         }
     }
 }

@@ -14,6 +14,7 @@ namespace cashier
 {
     public partial class Login : Form
     {
+            config conn = new config();
         public Login()
         {
             InitializeComponent();
@@ -22,11 +23,10 @@ namespace cashier
         private void button1_Click(object sender, EventArgs e)
         {
             //check koneksi ke database kirim pesan jika sudah terkoneksi
-            config conn = new config();
             conn.buka();
             MySqlConnection connection = conn.buka();
             MySqlCommand cmd = connection.CreateCommand();
-            cmd.CommandText = "SELECT * FROM petugas WHERE nama = '" + tbUser.Text + "' AND password = '" + tbPass.Text + "'";
+            cmd.CommandText = "SELECT * FROM petugas WHERE username = '" + tbUser.Text + "' AND password = '" + tbPass.Text + "'";
             MySqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
@@ -80,6 +80,13 @@ namespace cashier
 
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //form login close dan membuka form register
+            Hide();
+            register register = new register();
+            register.Show();
+        }
     }
 
 }
