@@ -38,7 +38,7 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnSimpan = new System.Windows.Forms.Button();
             this.tbCari = new System.Windows.Forms.TextBox();
-            this.table = new System.Windows.Forms.DataGridView();
+            this.dgvSupplier = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.tbNama = new System.Windows.Forms.TextBox();
@@ -46,7 +46,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,6 +106,7 @@
             this.b_exit.TabIndex = 5;
             this.b_exit.Text = "Exit";
             this.b_exit.UseVisualStyleBackColor = false;
+            this.b_exit.Click += new System.EventHandler(this.b_exit_Click);
             // 
             // label14
             // 
@@ -158,26 +159,26 @@
             this.tbCari.Size = new System.Drawing.Size(330, 31);
             this.tbCari.TabIndex = 0;
             // 
-            // table
+            // dgvSupplier
             // 
-            this.table.AllowUserToAddRows = false;
-            this.table.AllowUserToDeleteRows = false;
-            this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.table.Location = new System.Drawing.Point(40, 94);
-            this.table.Margin = new System.Windows.Forms.Padding(6);
-            this.table.Name = "table";
-            this.table.RowHeadersWidth = 82;
-            this.table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.table.Size = new System.Drawing.Size(918, 466);
-            this.table.TabIndex = 1;
+            this.dgvSupplier.AllowUserToAddRows = false;
+            this.dgvSupplier.AllowUserToDeleteRows = false;
+            this.dgvSupplier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSupplier.Location = new System.Drawing.Point(40, 94);
+            this.dgvSupplier.Margin = new System.Windows.Forms.Padding(6);
+            this.dgvSupplier.Name = "dgvSupplier";
+            this.dgvSupplier.RowHeadersWidth = 82;
+            this.dgvSupplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSupplier.Size = new System.Drawing.Size(918, 466);
+            this.dgvSupplier.TabIndex = 1;
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Silver;
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.tbCari);
-            this.groupBox3.Controls.Add(this.table);
+            this.groupBox3.Controls.Add(this.dgvSupplier);
             this.groupBox3.Location = new System.Drawing.Point(830, 197);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox3.Name = "groupBox3";
@@ -257,9 +258,11 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddSupplier";
             this.Text = "Supplier | SMKN 1 Kebumen";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddSupplier_FormClosed);
+            this.Load += new System.EventHandler(this.AddSupplier_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -277,7 +280,7 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnSimpan;
         private System.Windows.Forms.TextBox tbCari;
-        private System.Windows.Forms.DataGridView table;
+        private System.Windows.Forms.DataGridView dgvSupplier;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox tbNama;

@@ -23,10 +23,7 @@ namespace cashier
         }
         private void b_exit_Click(object sender, EventArgs e)
         {
-            mainmenu menu = new mainmenu();
-            menu.Enabled = true;
-            menu.Show();
-            Close();
+           
         }
 
         private void b_simpan_Click(object sender, EventArgs e)

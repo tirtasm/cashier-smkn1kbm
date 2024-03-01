@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using MySql.Data.MySqlClient;
 using System.Threading.Tasks;
-
 using System.Windows.Forms;
+using System.Data;
+
 
 
 
@@ -57,19 +58,15 @@ namespace cashier
             }
             return true;
         }
-        public MySqlDataReader tampil(string query)
+        public void tampil(string query, DataGridView dgv)
         {
-            MySqlDataReader hasil = null;
-            try
-            {
-                cmd = new MySqlCommand(query, buka());
-                hasil = cmd.ExecuteReader();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            return hasil;
+            cmd = new MySqlCommand(query, buka());
+            da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dgv.DataSource = dt;
+            dgv.ReadOnly = true;
+            dgv.Refresh();
         }
         
         public void kosongkanText(Control con)

@@ -35,7 +35,7 @@ namespace cashier
             }
             conn.query("INSERT INTO petugas (username, password, no_telp, alamat) VALUES ('" + tbUser.Text + "','" + tbPass.Text + "','" + tbHp.Text + "','" + tbAlamat.Text + "')");
             MessageBox.Show("Registrasi Berhasil");
-            
+            conn.kosongkanText(this);
 
 
         }
