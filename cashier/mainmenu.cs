@@ -48,17 +48,17 @@ namespace cashier
 
         private void barangToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddProduct product = new AddProduct();
-            product.Show();                        
+            AddProduct product = new AddProduct(this);
+            product.Show();
             this.Enabled = false;
         }
 
         private void supplierToolStripMenuItem_Click(object sender, EventArgs e)
         {          
-            
             AddSupplier supplier = new AddSupplier();
             supplier.Show();
             this.Enabled = false;
         }
+
     }
 }

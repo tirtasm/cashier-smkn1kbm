@@ -35,11 +35,9 @@
             this.masterDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supplierToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportKeuntunganKantinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportKeuntunganKantinToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,9 +51,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.masterDataToolStripMenuItem,
-
             this.viewToolStripMenuItem,
-
             this.reportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -75,7 +71,7 @@
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             this.logOutToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(272, 44);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
@@ -100,9 +96,7 @@
             this.supplierToolStripMenuItem.Name = "supplierToolStripMenuItem";
             this.supplierToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.supplierToolStripMenuItem.Text = "Add Supplier";
-
             this.supplierToolStripMenuItem.Click += new System.EventHandler(this.supplierToolStripMenuItem_Click);
-
             // 
             // viewToolStripMenuItem
             // 
@@ -116,15 +110,14 @@
             // productToolStripMenuItem
             // 
             this.productToolStripMenuItem.Name = "productToolStripMenuItem";
-            this.productToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.productToolStripMenuItem.Size = new System.Drawing.Size(235, 44);
             this.productToolStripMenuItem.Text = "Product";
             // 
             // supplierToolStripMenuItem1
             // 
             this.supplierToolStripMenuItem1.Name = "supplierToolStripMenuItem1";
-            this.supplierToolStripMenuItem1.Size = new System.Drawing.Size(359, 44);
+            this.supplierToolStripMenuItem1.Size = new System.Drawing.Size(235, 44);
             this.supplierToolStripMenuItem1.Text = "Supplier";
-
             // 
             // reportToolStripMenuItem
             // 
@@ -160,9 +153,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu | SMKN 1 Kebumen";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-
-            this.Text = "MainMenu | SMKN 1 Kebumen";
-
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainmenu_FormClosing);
             this.Load += new System.EventHandler(this.mainmenu_Load);
             this.menuStrip1.ResumeLayout(false);

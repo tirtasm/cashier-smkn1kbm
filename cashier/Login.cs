@@ -51,14 +51,6 @@ namespace cashier
         }*/
 
 
-
-        
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-            
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -67,19 +59,13 @@ namespace cashier
         private void tbUser_KeyDown(object sender, KeyEventArgs e)
         {
             //jika tombol enter ditekan maka akan pindah ke textbox password
-            if (e.KeyCode == Keys.Enter)
+            if(e.KeyCode == Keys.Enter)
             {
                 tbPass.Focus();
             }
-            
+
 
         }
-
-        private void tbPass_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //form login close dan membuka form register

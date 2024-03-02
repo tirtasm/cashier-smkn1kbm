@@ -21,18 +21,13 @@ namespace cashier
 
         private void b_simpan_Click(object sender, EventArgs e)
         {
-            if (tbNama.Text == "" || tbAlamat.Text == "" || tbHp.Text == "")
-            {
-                MessageBox.Show("Data Tidak Boleh Kosong");
-                return;
-            }
-            else
-            {
-                conn.query("INSERT INTO supplier (nama, alamat, no_telp) VALUES ('" + tbNama.Text + "','" + tbAlamat.Text + "','" + tbHp.Text + "')");
-                MessageBox.Show("Data Berhasil Disimpan");
-            }
+            
+                /*conn.query("INSERT INTO supplier (nama, alamat, no_telp) VALUES ('" + tbNama.Text + "','" + tbAlamat.Text + "','" + tbHp.Text + "')");*/
+                /*conn.query("INSERT INTO supplier (nama, alamat, no_telp) VALUES ('" + tbNama.Text + "','" + tbAlamat.Text + "','" + tbHp.Text + "')");*/
+            MessageBox.Show("Data Berhasil Disimpan");
+            
             conn.kosongkanText(this);
-            conn.tampil("SELECT * FROM supplier", dgvSupplier);
+            /*conn.tampil("SELECT nama FROM supplier", dgvSupplier);*/
         }
 
         private void b_exit_Click(object sender, EventArgs e)
@@ -48,7 +43,18 @@ namespace cashier
 
         private void AddSupplier_Load(object sender, EventArgs e)
         {
-            conn.tampil("SELECT * FROM supplier", dgvSupplier);
+            /*conn.tampil("SELECT nama, no_telp, alamat FROM supplier", dgvSupplier);*/
+        }
+
+        private void tbCari_TextChanged(object sender, EventArgs e)
+        {
+            /*conn.tampil("SELECT * FROM supplier WHERE no_telp or nama LIKE '%" + tbCari.Text + "%'", dgvSupplier);*/
+
+        }
+
+        private void cbSupplier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

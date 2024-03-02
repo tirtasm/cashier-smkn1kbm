@@ -78,21 +78,20 @@
             // 
             // tbUser
             // 
+            this.tbUser.CausesValidation = false;
             this.tbUser.Location = new System.Drawing.Point(135, 334);
-            this.tbUser.Multiline = true;
             this.tbUser.Name = "tbUser";
-            this.tbUser.Size = new System.Drawing.Size(422, 41);
+            this.tbUser.Size = new System.Drawing.Size(422, 31);
             this.tbUser.TabIndex = 4;
+            this.tbUser.WordWrap = false;
             this.tbUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbUser_KeyDown);
             // 
             // tbPass
             // 
             this.tbPass.Location = new System.Drawing.Point(135, 457);
-            this.tbPass.Multiline = true;
             this.tbPass.Name = "tbPass";
-            this.tbPass.Size = new System.Drawing.Size(422, 41);
+            this.tbPass.Size = new System.Drawing.Size(422, 31);
             this.tbPass.TabIndex = 5;
-            this.tbPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPass_KeyDown);
             // 
             // linkLabel1
             // 
@@ -125,7 +124,7 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login | SMKN 1 Kebumen";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 
