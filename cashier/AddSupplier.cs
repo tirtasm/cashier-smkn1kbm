@@ -13,7 +13,8 @@ namespace cashier
 {
     public partial class AddSupplier : Form
     {
-            config conn = new config();
+        config con = new config();
+        int id;
         public AddSupplier()
         {
             InitializeComponent();
@@ -21,13 +22,13 @@ namespace cashier
 
         private void b_simpan_Click(object sender, EventArgs e)
         {
-            
-                /*conn.query("INSERT INTO supplier (nama, alamat, no_telp) VALUES ('" + tbNama.Text + "','" + tbAlamat.Text + "','" + tbHp.Text + "')");*/
-                /*conn.query("INSERT INTO supplier (nama, alamat, no_telp) VALUES ('" + tbNama.Text + "','" + tbAlamat.Text + "','" + tbHp.Text + "')");*/
+
+
+            con.query("INSERT INTO supplier (nama, alamat, no_telp) VALUES ('" + tbNama.Text + "','" + tbAlamat.Text + "','" + tbTelp.Text + "')");
             MessageBox.Show("Data Berhasil Disimpan");
             
-            conn.kosongkanText(this);
-            /*conn.tampil("SELECT nama FROM supplier", dgvSupplier);*/
+            con.tampil("SELECT * FROM supplier", dgvSupplier);
+            con.kosongkanText(this);
         }
 
         private void b_exit_Click(object sender, EventArgs e)
@@ -43,7 +44,7 @@ namespace cashier
 
         private void AddSupplier_Load(object sender, EventArgs e)
         {
-            /*conn.tampil("SELECT nama, no_telp, alamat FROM supplier", dgvSupplier);*/
+            con.tampil("SELECT * FROM supplier", dgvSupplier);
         }
 
         private void tbCari_TextChanged(object sender, EventArgs e)
@@ -51,10 +52,27 @@ namespace cashier
             /*conn.tampil("SELECT * FROM supplier WHERE no_telp or nama LIKE '%" + tbCari.Text + "%'", dgvSupplier);*/
 
         }
-
-        private void cbSupplier_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
+            con.query("DELETE FROM supplier WHERE id_supplier= " + id);
+            con.kosongkanText(this);
+            con.tampil("SELECT * FROM supplier", dgvSupplier);
+        }
 
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            con.query("UPDATE supplier SET nama = '" + tbNama.Text + "', alamat='" + tbAlamat.Text + "', no_telp='" + tbTelp.Text + "' WHERE id_supplier = " + id);
+            con.kosongkanText(this);
+            con.tampil("SELECT * FROM supplier", dgvSupplier);
+        }
+
+        private void dgvSupplier_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow dr = dgvSupplier.Rows[e.RowIndex];
+            id = Convert.ToInt32(dr.Cells[0].Value);
+            tbNama.Text = dr.Cells[1].Value.ToString();
+            tbTelp.Text = dr.Cells[2].Value.ToString();
+            tbAlamat.Text = dr.Cells[3].Value.ToString();
         }
     }
 }

@@ -17,7 +17,7 @@ namespace cashier
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-             Application.Run(new AddProduct());
+             Application.Run(new Supplier());
 
             
 

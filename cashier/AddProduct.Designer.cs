@@ -88,6 +88,7 @@
             this.t_cari.Name = "t_cari";
             this.t_cari.Size = new System.Drawing.Size(330, 31);
             this.t_cari.TabIndex = 0;
+            this.t_cari.TextChanged += new System.EventHandler(this.t_cari_TextChanged);
             // 
             // dgvProduk
             // 
@@ -163,6 +164,7 @@
             this.b_edit.TabIndex = 1;
             this.b_edit.Text = "Edit";
             this.b_edit.UseVisualStyleBackColor = false;
+            this.b_edit.Click += new System.EventHandler(this.b_edit_Click);
             // 
             // b_simpan
             // 
@@ -194,9 +196,8 @@
             // tbProduk
             // 
             this.tbProduk.Location = new System.Drawing.Point(285, 325);
-            this.tbProduk.Multiline = true;
             this.tbProduk.Name = "tbProduk";
-            this.tbProduk.Size = new System.Drawing.Size(436, 39);
+            this.tbProduk.Size = new System.Drawing.Size(436, 31);
             this.tbProduk.TabIndex = 70;
             // 
             // AddProduct
