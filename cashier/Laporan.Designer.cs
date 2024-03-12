@@ -123,7 +123,7 @@
             // 
             // b_exit
             // 
-            this.b_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
+            this.b_exit.BackColor = System.Drawing.Color.Red;
             this.b_exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.b_exit.FlatAppearance.BorderSize = 0;
             this.b_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

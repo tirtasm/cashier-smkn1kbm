@@ -59,6 +59,7 @@ namespace cashier
             }
             return true;
         }
+     
         public void tampil(string query, DataGridView dgv)
         {
             cmd = new MySqlCommand(query, buka());
@@ -83,8 +84,30 @@ namespace cashier
                     kosongkanText(c);
                 }
             }
+            foreach (Control c in con.Controls)
+            {
+                if (c is ComboBox)
+                {
+                    ((ComboBox)c).SelectedIndex = -1;
+                }
+                else
+                {
+                    kosongkanText(c);
+                }
+            }
         }
-      
-        
+        //getLastId for auto increment id
+        public int getLastId(string query)
+        {
+            int id = 0;
+            cmd = new MySqlCommand(query, buka());
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                id = reader.GetInt32(0);
+            }
+            return id;
+        }
+
     }
 }

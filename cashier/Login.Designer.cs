@@ -36,6 +36,7 @@
             this.tbUser = new System.Windows.Forms.TextBox();
             this.tbPass = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.checkBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -92,6 +93,7 @@
             this.tbPass.Name = "tbPass";
             this.tbPass.Size = new System.Drawing.Size(422, 31);
             this.tbPass.TabIndex = 5;
+            this.tbPass.UseSystemPasswordChar = true;
             // 
             // linkLabel1
             // 
@@ -104,12 +106,24 @@
             this.linkLabel1.Text = "Register";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // checkBox
+            // 
+            this.checkBox.AutoSize = true;
+            this.checkBox.Location = new System.Drawing.Point(135, 511);
+            this.checkBox.Name = "checkBox";
+            this.checkBox.Size = new System.Drawing.Size(197, 29);
+            this.checkBox.TabIndex = 7;
+            this.checkBox.Text = "Show Password";
+            this.checkBox.UseVisualStyleBackColor = true;
+            this.checkBox.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(682, 731);
+            this.Controls.Add(this.checkBox);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.tbPass);
             this.Controls.Add(this.tbUser);
@@ -124,7 +138,6 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login | SMKN 1 Kebumen";
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,6 +152,7 @@
         private System.Windows.Forms.TextBox tbUser;
         private System.Windows.Forms.TextBox tbPass;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.CheckBox checkBox;
     }
 }
 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace cashier
 {
-    public partial class Transaksi : Form
+    public partial class TransaksiPenjualan : Form
     {
-        public Transaksi()
+        public TransaksiPenjualan()
         {
             InitializeComponent();
         }

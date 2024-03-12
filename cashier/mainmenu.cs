@@ -46,19 +46,28 @@ namespace cashier
 
         }
 
-        private void barangToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AddProduct product = new AddProduct(this);
-            product.Show();
-            this.Enabled = false;
-        }
+      
 
         private void supplierToolStripMenuItem_Click(object sender, EventArgs e)
         {          
-            AddSupplier supplier = new AddSupplier();
+            AddSupplier supplier = new AddSupplier(this);
             supplier.Show();
-            this.Enabled = false;
+            supplierToolStripMenuItem.Enabled = false;
         }
 
+        private void detailSupplierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Supplier supplier = new Supplier(this);
+            supplier.Show();
+            detailSupplierToolStripMenuItem.Enabled = false;
+        }
+
+        private void produkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddProduct product = new AddProduct(this);
+            product.Show();
+            produkToolStripMenuItem.Enabled = false;
+
+        }
     }
 }

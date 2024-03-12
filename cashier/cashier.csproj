@@ -149,6 +149,12 @@
     <Compile Include="Supplier.Designer.cs">
       <DependentUpon>Supplier.cs</DependentUpon>
     </Compile>
+    <Compile Include="TransaksiPenjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransaksiPenjualan.Designer.cs">
+      <DependentUpon>TransaksiPenjualan.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewProduk.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,12 +181,6 @@
     <Compile Include="AddSupplier.Designer.cs">
       <DependentUpon>AddSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transaksi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transaksi.Designer.cs">
-      <DependentUpon>Transaksi.cs</DependentUpon>
-    </Compile>
     <Compile Include="ViewSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier.resx">
       <DependentUpon>Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransaksiPenjualan.resx">
+      <DependentUpon>TransaksiPenjualan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewProduk.resx">
       <DependentUpon>ViewProduk.cs</DependentUpon>
@@ -222,9 +225,6 @@
     </Compile>
     <EmbeddedResource Include="AddSupplier.resx">
       <DependentUpon>AddSupplier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Transaksi.resx">
-      <DependentUpon>Transaksi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

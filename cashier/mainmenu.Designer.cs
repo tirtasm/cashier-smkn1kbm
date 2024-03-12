@@ -33,8 +33,9 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.masterDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.barangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.produkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.detailSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supplierToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,18 +79,19 @@
             // masterDataToolStripMenuItem
             // 
             this.masterDataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.barangToolStripMenuItem,
-            this.supplierToolStripMenuItem});
+            this.produkToolStripMenuItem,
+            this.supplierToolStripMenuItem,
+            this.detailSupplierToolStripMenuItem});
             this.masterDataToolStripMenuItem.Name = "masterDataToolStripMenuItem";
             this.masterDataToolStripMenuItem.Size = new System.Drawing.Size(163, 38);
             this.masterDataToolStripMenuItem.Text = "Master Data";
             // 
-            // barangToolStripMenuItem
+            // produkToolStripMenuItem
             // 
-            this.barangToolStripMenuItem.Name = "barangToolStripMenuItem";
-            this.barangToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
-            this.barangToolStripMenuItem.Text = "Add Product";
-            this.barangToolStripMenuItem.Click += new System.EventHandler(this.barangToolStripMenuItem_Click);
+            this.produkToolStripMenuItem.Name = "produkToolStripMenuItem";
+            this.produkToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.produkToolStripMenuItem.Text = "Add Product";
+            this.produkToolStripMenuItem.Click += new System.EventHandler(this.produkToolStripMenuItem_Click);
             // 
             // supplierToolStripMenuItem
             // 
@@ -97,6 +99,13 @@
             this.supplierToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.supplierToolStripMenuItem.Text = "Add Supplier";
             this.supplierToolStripMenuItem.Click += new System.EventHandler(this.supplierToolStripMenuItem_Click);
+            // 
+            // detailSupplierToolStripMenuItem
+            // 
+            this.detailSupplierToolStripMenuItem.Name = "detailSupplierToolStripMenuItem";
+            this.detailSupplierToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.detailSupplierToolStripMenuItem.Text = "Detail Supplier";
+            this.detailSupplierToolStripMenuItem.Click += new System.EventHandler(this.detailSupplierToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
@@ -167,7 +176,7 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem masterDataToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem barangToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem produkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supplierToolStripMenuItem;
 
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
@@ -177,5 +186,6 @@
         private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportKeuntunganKantinToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportKeuntunganKantinToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem detailSupplierToolStripMenuItem;
     }
 }

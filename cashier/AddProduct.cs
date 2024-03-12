@@ -22,7 +22,7 @@ namespace cashier
         public AddProduct(mainmenu mainMenu = null)
         {
             InitializeComponent();
-            this.mainMenu = mainMenu;
+            
         }
 
 

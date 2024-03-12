@@ -28,16 +28,20 @@ namespace cashier
             MySqlCommand cmd = connection.CreateCommand();
             cmd.CommandText = "SELECT * FROM petugas WHERE username = '" + tbUser.Text + "' AND password = '" + tbPass.Text + "'";
             MySqlDataReader reader = cmd.ExecuteReader();
-            if (reader.Read())
+            if(tbPass.Text == "" || tbUser.Text == "")
             {
-                MessageBox.Show("Login Berhasil");
+                MessageBox.Show("Username dan Password tidak boleh kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (reader.Read())
+            {
+                MessageBox.Show("Login Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Hide();
                 mainmenu mainmenu = new mainmenu();
                 mainmenu.Show();
             }
             else
             {
-                MessageBox.Show("Login Gagal");
+                MessageBox.Show("Username atau Password salah", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             conn.tutup();
 }
@@ -72,6 +76,18 @@ namespace cashier
             Hide();
             register register = new register();
             register.Show();
+        }
+
+        private void checkBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox.Checked)
+            {
+                tbPass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                tbPass.UseSystemPasswordChar = true;
+            }
         }
     }
 

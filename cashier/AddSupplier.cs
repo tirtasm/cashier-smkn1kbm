@@ -15,15 +15,15 @@ namespace cashier
     {
         config con = new config();
         int id;
-        public AddSupplier()
+        private mainmenu mainMenu;
+        public AddSupplier(mainmenu mainMenu)
         {
             InitializeComponent();
+            this.mainMenu = mainMenu;
         }
 
         private void b_simpan_Click(object sender, EventArgs e)
         {
-
-
             con.query("INSERT INTO supplier (nama, alamat, no_telp) VALUES ('" + tbNama.Text + "','" + tbAlamat.Text + "','" + tbTelp.Text + "')");
             MessageBox.Show("Data Berhasil Disimpan");
             
@@ -33,7 +33,8 @@ namespace cashier
 
         private void b_exit_Click(object sender, EventArgs e)
         {
-
+            mainMenu.Enabled = true;
+            this.Close();
         }
 
         private void AddSupplier_FormClosed(object sender, FormClosedEventArgs e)
