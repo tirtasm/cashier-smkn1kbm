@@ -36,7 +36,9 @@ namespace cashier
 
         private void Supplier_Load(object sender, EventArgs e)
         {
-            con.tampil("SELECT * FROM supplier", dgvAddSupplier);
+            con.tampil("SELECT transaksi_supplier.tanggal, petugas.username AS Petugas, supplier.nama AS NamaSupplier, produk.nama AS Produk, detail_supplier.harga AS HargaSatuan, detail_supplier.stok AS Stok, detail_supplier.jumlah AS Jumlah FROM detail_supplier" +
+                " JOIN transaksi_supplier ON transaksi_supplier.id_transaksi_supplier = detail_supplier.id_transaksi_supplier JOIN petugas ON petugas.id_petugas = transaksi_supplier.id_petugas JOIN supplier ON " +
+                "supplier.id_supplier = transaksi_supplier.id_supplier JOIN produk ON produk.id_produk = detail_supplier.id_produk;", dgvAddSupplier);
             cmbSupp();
             cmbProduk();
             cmbPetugas();
@@ -115,12 +117,16 @@ namespace cashier
                 con.query("INSERT INTO transaksi_supplier (tanggal, id_supplier, id_petugas) VALUES ('" + dtSupplier.Value.ToString("yyyy-MM-dd") + "', '" + cbSupplier.SelectedValue + "', '" + cbPetugas.SelectedValue + "')");
                 lastId = con.getLastId("SELECT id_transaksi_supplier FROM transaksi_supplier ORDER BY id_transaksi_supplier DESC LIMIT 1");
                 con.query("INSERT INTO detail_supplier (id_transaksi_supplier, id_produk, harga, stok) VALUES ('" + lastId + "', '" + cbProduk.SelectedValue + "', '" + tbHarga.Text + "', '" + tbStok.Text + "')");
-                
+                /*MessageBox.Show("\ntanggal" + dtSupplier.Value.ToString() + "\n suppleir" + cbSupplier.SelectedValue + "\n petugas" + cbPetugas.SelectedValue + "\n lastid" + lastId + "\n produk" + cbProduk.SelectedValue + "\n harga"+ tbHarga.Text + "\nstok" + tbStok.Text);*/
 
                 int jumlah = int.Parse(tbHarga.Text) * int.Parse(tbStok.Text);
                 con.query("UPDATE detail_supplier SET jumlah = '" + jumlah + "' WHERE id_transaksi_supplier = '" + lastId + "'");
                 MessageBox.Show("Data Berhasil Disimpan");
                 con.kosongkanText(this);
+                con.tampil("SELECT transaksi_supplier.tanggal, petugas.username AS Petugas, supplier.nama AS NamaSupplier, produk.nama AS Produk, detail_supplier.harga AS HargaSatuan, detail_supplier.stok AS Stok, detail_supplier.jumlah AS Jumlah FROM detail_supplier" +
+                " JOIN transaksi_supplier ON transaksi_supplier.id_transaksi_supplier = detail_supplier.id_transaksi_supplier JOIN petugas ON petugas.id_petugas = transaksi_supplier.id_petugas JOIN supplier ON " +
+                "supplier.id_supplier = transaksi_supplier.id_supplier JOIN produk ON produk.id_produk = detail_supplier.id_produk;", dgvAddSupplier);
+
             }
         }
 
@@ -134,6 +140,13 @@ namespace cashier
             
             mainMenu.Enabled = true;
             this.Close();
+        }
+
+        private void tbCari_TextChanged(object sender, EventArgs e)
+        {
+            con.tampil("SELECT transaksi_supplier.tanggal, petugas.username AS Petugas, supplier.nama AS NamaSupplier, produk.nama AS Produk, detail_supplier.harga AS HargaSatuan, detail_supplier.stok AS Stok, detail_supplier.jumlah AS Jumlah FROM detail_supplier" +
+                " JOIN transaksi_supplier ON transaksi_supplier.id_transaksi_supplier = detail_supplier.id_transaksi_supplier JOIN petugas ON petugas.id_petugas = transaksi_supplier.id_petugas JOIN supplier ON " +
+                "supplier.id_supplier = transaksi_supplier.id_supplier JOIN produk ON produk.id_produk = detail_supplier.id_produk WHERE supplier.nama LIKE '%"+tbCari.Text+"%'", dgvAddSupplier);
         }
     }
 }

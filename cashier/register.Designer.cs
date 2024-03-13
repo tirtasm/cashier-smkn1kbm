@@ -43,17 +43,16 @@
             // tbPass
             // 
             this.tbPass.Location = new System.Drawing.Point(236, 210);
-            this.tbPass.Multiline = true;
             this.tbPass.Name = "tbPass";
-            this.tbPass.Size = new System.Drawing.Size(422, 41);
+            this.tbPass.Size = new System.Drawing.Size(422, 31);
             this.tbPass.TabIndex = 12;
+            this.tbPass.UseSystemPasswordChar = true;
             // 
             // tbUser
             // 
             this.tbUser.Location = new System.Drawing.Point(236, 132);
-            this.tbUser.Multiline = true;
             this.tbUser.Name = "tbUser";
-            this.tbUser.Size = new System.Drawing.Size(422, 41);
+            this.tbUser.Size = new System.Drawing.Size(422, 31);
             this.tbUser.TabIndex = 11;
             // 
             // label2
@@ -87,18 +86,17 @@
             // tbAlamat
             // 
             this.tbAlamat.Location = new System.Drawing.Point(236, 370);
-            this.tbAlamat.Multiline = true;
             this.tbAlamat.Name = "tbAlamat";
-            this.tbAlamat.Size = new System.Drawing.Size(422, 41);
+            this.tbAlamat.Size = new System.Drawing.Size(422, 31);
             this.tbAlamat.TabIndex = 16;
             // 
             // tbHp
             // 
             this.tbHp.Location = new System.Drawing.Point(236, 290);
-            this.tbHp.Multiline = true;
             this.tbHp.Name = "tbHp";
-            this.tbHp.Size = new System.Drawing.Size(422, 41);
+            this.tbHp.Size = new System.Drawing.Size(422, 31);
             this.tbHp.TabIndex = 15;
+            this.tbHp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbHp_KeyPress);
             // 
             // label3
             // 

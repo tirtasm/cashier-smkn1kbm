@@ -22,7 +22,7 @@ namespace cashier
         public AddProduct(mainmenu mainMenu = null)
         {
             InitializeComponent();
-            
+            this.mainMenu = mainMenu;
         }
 
 
@@ -82,6 +82,14 @@ namespace cashier
             tbProduk.Clear();
             con.tampil("SELECT id_produk as No, nama as NamaProduk FROM produk", dgvProduk);
 
+        }
+
+        private void tbProduk_KeyDown(object sender, KeyEventArgs e)
+        {
+            /*if (e.KeyCode == Keys.Enter)
+            {
+                b_simpan.PerformClick();
+            }*/
         }
     }
 }

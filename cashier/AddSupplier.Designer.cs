@@ -215,6 +215,7 @@
             this.tbCari.Name = "tbCari";
             this.tbCari.Size = new System.Drawing.Size(330, 31);
             this.tbCari.TabIndex = 0;
+            this.tbCari.TextChanged += new System.EventHandler(this.tbCari_TextChanged_1);
             // 
             // dgvSupplier
             // 
@@ -238,6 +239,7 @@
             this.tbTelp.Name = "tbTelp";
             this.tbTelp.Size = new System.Drawing.Size(300, 31);
             this.tbTelp.TabIndex = 99;
+            this.tbTelp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbTelp_KeyPress);
             // 
             // AddSupplier
             // 

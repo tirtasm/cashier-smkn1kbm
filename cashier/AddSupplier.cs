@@ -75,5 +75,18 @@ namespace cashier
             tbTelp.Text = dr.Cells[2].Value.ToString();
             tbAlamat.Text = dr.Cells[3].Value.ToString();
         }
+
+        private void tbTelp_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '+')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbCari_TextChanged_1(object sender, EventArgs e)
+        {
+            con.tampil("SELECT * FROM supplier WHERE nama LIKE '%" +tbCari.Text +"%'", dgvSupplier);
+        }
     }
 }

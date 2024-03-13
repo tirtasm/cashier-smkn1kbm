@@ -102,6 +102,7 @@
             this.tbCari.Name = "tbCari";
             this.tbCari.Size = new System.Drawing.Size(330, 31);
             this.tbCari.TabIndex = 0;
+            this.tbCari.TextChanged += new System.EventHandler(this.tbCari_TextChanged);
             // 
             // tbStok
             // 

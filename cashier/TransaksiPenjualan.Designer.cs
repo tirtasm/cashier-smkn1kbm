@@ -38,7 +38,6 @@
             this.tbTotal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbProduk = new System.Windows.Forms.ComboBox();
             this.cbPetugas = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtSupplier = new System.Windows.Forms.DateTimePicker();
@@ -51,6 +50,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.b_exit = new System.Windows.Forms.Button();
             this.cbStatus = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddSupplier)).BeginInit();
             this.panel1.SuspendLayout();
@@ -164,16 +164,6 @@
             this.label2.Size = new System.Drawing.Size(160, 29);
             this.label2.TabIndex = 127;
             this.label2.Text = "Nama Produk";
-            // 
-            // cbProduk
-            // 
-            this.cbProduk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbProduk.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cbProduk.FormattingEnabled = true;
-            this.cbProduk.Location = new System.Drawing.Point(292, 347);
-            this.cbProduk.Name = "cbProduk";
-            this.cbProduk.Size = new System.Drawing.Size(240, 33);
-            this.cbProduk.TabIndex = 126;
             // 
             // cbPetugas
             // 
@@ -317,18 +307,25 @@
             this.cbStatus.Size = new System.Drawing.Size(240, 33);
             this.cbStatus.TabIndex = 133;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(292, 347);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(240, 31);
+            this.textBox1.TabIndex = 134;
+            // 
             // TransaksiPenjualan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1884, 865);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbTotal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbProduk);
             this.Controls.Add(this.cbPetugas);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtSupplier);
@@ -362,7 +359,6 @@
         private System.Windows.Forms.TextBox tbTotal;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbProduk;
         private System.Windows.Forms.ComboBox cbPetugas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtSupplier;
@@ -376,5 +372,6 @@
         private System.Windows.Forms.Button b_exit;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cbStatus;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

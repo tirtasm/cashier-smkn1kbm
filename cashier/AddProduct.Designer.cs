@@ -199,6 +199,7 @@
             this.tbProduk.Name = "tbProduk";
             this.tbProduk.Size = new System.Drawing.Size(436, 31);
             this.tbProduk.TabIndex = 70;
+            this.tbProduk.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbProduk_KeyDown);
             // 
             // AddProduct
             // 
