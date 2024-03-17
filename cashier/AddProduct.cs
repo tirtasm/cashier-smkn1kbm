@@ -15,25 +15,24 @@ namespace cashier
 {
     public partial class AddProduct : Form
     {
-        private mainmenu mainMenu;
         config con = new config();
-        
         int id;
-        public AddProduct(mainmenu mainMenu = null)
+        public AddProduct()
         {
             InitializeComponent();
-            this.mainMenu = mainMenu;
         }
-
-
         private void Product_Load(object sender, EventArgs e)
         {
             con.tampil("SELECT id_produk as No, nama as NamaProduk FROM produk", dgvProduk);
+            
+            dgvProduk.Columns[0].Visible = false;
+            this.Size = new Size(790, 420);
+            
         }
         private void b_exit_Click(object sender, EventArgs e)
         {
-            mainMenu.Enabled = true;
-            this.Close();
+            mainmenu.main.produkToolStripMenuItem.Enabled = true;
+            this.Hide();
         }
 
         private void b_simpan_Click(object sender, EventArgs e)
@@ -46,7 +45,8 @@ namespace cashier
 
         private void AddProduct_FormClosed(object sender, FormClosedEventArgs e)
         {
-            mainMenu.Enabled = true;
+            mainmenu.main.produkToolStripMenuItem.Enabled = true;
+            this.Hide();
         }
 
         private void b_delete_Click(object sender, EventArgs e)
@@ -63,12 +63,6 @@ namespace cashier
             }
             
         }
-        private void dgvProduk_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow dr = dgvProduk.Rows[e.RowIndex];
-            id = Convert.ToInt32(dr.Cells[0].Value);
-            tbProduk.Text = dr.Cells[1].Value.ToString();
-        }
 
         private void t_cari_TextChanged(object sender, EventArgs e)
         {
@@ -84,12 +78,11 @@ namespace cashier
 
         }
 
-        private void tbProduk_KeyDown(object sender, KeyEventArgs e)
+        private void dgvProduk_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*if (e.KeyCode == Keys.Enter)
-            {
-                b_simpan.PerformClick();
-            }*/
+            DataGridViewRow dr = dgvProduk.Rows[e.RowIndex];
+            id = Convert.ToInt32(dr.Cells[0].Value);
+            tbProduk.Text = dr.Cells[1].Value.ToString();
         }
     }
 }

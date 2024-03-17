@@ -57,7 +57,7 @@
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(492, 553);
+            this.btnDelete.Location = new System.Drawing.Point(482, 547);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(6);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(176, 63);
@@ -71,10 +71,10 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.panel1.Controls.Add(this.b_exit);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Location = new System.Drawing.Point(-5, 15);
+            this.panel1.Location = new System.Drawing.Point(-6, -1);
             this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2326, 137);
+            this.panel1.Size = new System.Drawing.Size(1699, 137);
             this.panel1.TabIndex = 80;
             // 
             // b_exit
@@ -84,10 +84,10 @@
             this.b_exit.FlatAppearance.BorderSize = 0;
             this.b_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_exit.ForeColor = System.Drawing.Color.White;
-            this.b_exit.Location = new System.Drawing.Point(53, 35);
+            this.b_exit.Location = new System.Drawing.Point(38, 31);
             this.b_exit.Margin = new System.Windows.Forms.Padding(6);
             this.b_exit.Name = "b_exit";
-            this.b_exit.Size = new System.Drawing.Size(112, 63);
+            this.b_exit.Size = new System.Drawing.Size(112, 62);
             this.b_exit.TabIndex = 5;
             this.b_exit.Text = "Exit";
             this.b_exit.UseVisualStyleBackColor = false;
@@ -98,7 +98,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(966, 62);
+            this.label14.Location = new System.Drawing.Point(724, 57);
             this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(256, 36);
@@ -112,7 +112,7 @@
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(304, 553);
+            this.btnEdit.Location = new System.Drawing.Point(294, 547);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(6);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(176, 63);
@@ -128,7 +128,7 @@
             this.btnSimpan.FlatAppearance.BorderSize = 0;
             this.btnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSimpan.ForeColor = System.Drawing.Color.White;
-            this.btnSimpan.Location = new System.Drawing.Point(112, 553);
+            this.btnSimpan.Location = new System.Drawing.Point(102, 547);
             this.btnSimpan.Margin = new System.Windows.Forms.Padding(6);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(176, 63);
@@ -190,11 +190,11 @@
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.tbCari);
             this.groupBox3.Controls.Add(this.dgvSupplier);
-            this.groupBox3.Location = new System.Drawing.Point(814, 176);
+            this.groupBox3.Location = new System.Drawing.Point(724, 182);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox3.Size = new System.Drawing.Size(1003, 639);
+            this.groupBox3.Size = new System.Drawing.Size(908, 560);
             this.groupBox3.TabIndex = 98;
             this.groupBox3.TabStop = false;
             // 
@@ -223,15 +223,15 @@
             this.dgvSupplier.AllowUserToDeleteRows = false;
             this.dgvSupplier.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSupplier.Location = new System.Drawing.Point(15, 104);
+            this.dgvSupplier.Location = new System.Drawing.Point(15, 96);
             this.dgvSupplier.Margin = new System.Windows.Forms.Padding(6);
             this.dgvSupplier.Name = "dgvSupplier";
             this.dgvSupplier.ReadOnly = true;
             this.dgvSupplier.RowHeadersWidth = 82;
             this.dgvSupplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSupplier.Size = new System.Drawing.Size(973, 526);
+            this.dgvSupplier.Size = new System.Drawing.Size(881, 448);
             this.dgvSupplier.TabIndex = 1;
-            this.dgvSupplier.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSupplier_CellContentClick);
+            this.dgvSupplier.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSupplier_CellContentDoubleClick);
             // 
             // tbTelp
             // 
@@ -245,8 +245,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1846, 845);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(1671, 813);
             this.Controls.Add(this.tbTelp);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.tbAlamat);
@@ -258,8 +258,11 @@
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnSimpan);
             this.Controls.Add(this.label5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "AddSupplier";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Supplier | SMKN 1 Kebumen";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddSupplier_FormClosed);
             this.Load += new System.EventHandler(this.AddSupplier_Load);

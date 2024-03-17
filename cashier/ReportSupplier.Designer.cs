@@ -1,6 +1,6 @@
 ﻿namespace cashier
 {
-    partial class KeuntunganKantin
+    partial class ReportSupplier
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KeuntunganKantin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportSupplier));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.tbCari = new System.Windows.Forms.TextBox();
-            this.dgvKeuntungan = new System.Windows.Forms.DataGridView();
+            this.dgvSupp = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.b_exit = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKeuntungan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSupp)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,13 +46,13 @@
             this.groupBox3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.tbCari);
-            this.groupBox3.Controls.Add(this.dgvKeuntungan);
-            this.groupBox3.Location = new System.Drawing.Point(50, 168);
+            this.groupBox3.Controls.Add(this.dgvSupp);
+            this.groupBox3.Location = new System.Drawing.Point(29, 157);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox3.Size = new System.Drawing.Size(1426, 685);
-            this.groupBox3.TabIndex = 153;
+            this.groupBox3.Size = new System.Drawing.Size(2091, 1087);
+            this.groupBox3.TabIndex = 151;
             this.groupBox3.TabStop = false;
             // 
             // label13
@@ -73,32 +73,32 @@
             this.tbCari.Size = new System.Drawing.Size(330, 31);
             this.tbCari.TabIndex = 0;
             // 
-            // dgvKeuntungan
+            // dgvSupp
             // 
-            this.dgvKeuntungan.AllowUserToAddRows = false;
-            this.dgvKeuntungan.AllowUserToDeleteRows = false;
-            this.dgvKeuntungan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvKeuntungan.BackgroundColor = System.Drawing.SystemColors.Menu;
-            this.dgvKeuntungan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKeuntungan.Location = new System.Drawing.Point(43, 93);
-            this.dgvKeuntungan.Margin = new System.Windows.Forms.Padding(6);
-            this.dgvKeuntungan.Name = "dgvKeuntungan";
-            this.dgvKeuntungan.ReadOnly = true;
-            this.dgvKeuntungan.RowHeadersWidth = 82;
-            this.dgvKeuntungan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKeuntungan.Size = new System.Drawing.Size(1346, 558);
-            this.dgvKeuntungan.TabIndex = 1;
+            this.dgvSupp.AllowUserToAddRows = false;
+            this.dgvSupp.AllowUserToDeleteRows = false;
+            this.dgvSupp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSupp.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.dgvSupp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSupp.Location = new System.Drawing.Point(50, 95);
+            this.dgvSupp.Margin = new System.Windows.Forms.Padding(6);
+            this.dgvSupp.Name = "dgvSupp";
+            this.dgvSupp.ReadOnly = true;
+            this.dgvSupp.RowHeadersWidth = 82;
+            this.dgvSupp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSupp.Size = new System.Drawing.Size(1995, 961);
+            this.dgvSupp.TabIndex = 1;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.panel1.Controls.Add(this.b_exit);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Location = new System.Drawing.Point(-19, -9);
+            this.panel1.Location = new System.Drawing.Point(-8, -6);
             this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(2382, 137);
-            this.panel1.TabIndex = 152;
+            this.panel1.TabIndex = 142;
             // 
             // b_exit
             // 
@@ -121,28 +121,28 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(655, 62);
+            this.label14.Location = new System.Drawing.Point(1034, 62);
             this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(287, 36);
+            this.label14.Size = new System.Drawing.Size(247, 36);
             this.label14.TabIndex = 0;
-            this.label14.Text = "Keuntungan Kantin";
+            this.label14.Text = "Detail Penjualan";
             // 
-            // KeuntunganKantin
+            // ReportSupplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1566, 897);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(2135, 1259);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "KeuntunganKantin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "KeuntunganKantin";
-            this.Load += new System.EventHandler(this.KeuntunganKantin_Load);
+            this.Name = "ReportSupplier";
+            this.Text = "  Laporan Supplier";
+            this.Load += new System.EventHandler(this.ReportSupplier_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKeuntungan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSupp)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -154,7 +154,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox tbCari;
-        private System.Windows.Forms.DataGridView dgvKeuntungan;
+        private System.Windows.Forms.DataGridView dgvSupp;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button b_exit;
         private System.Windows.Forms.Label label14;

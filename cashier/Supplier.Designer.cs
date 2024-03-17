@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Supplier));
             this.label13 = new System.Windows.Forms.Label();
             this.dgvAddSupplier = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -51,6 +52,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.process1 = new System.Diagnostics.Process();
+            this.btnSup = new System.Windows.Forms.Button();
+            this.btnProduk = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddSupplier)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -80,6 +83,7 @@
             this.dgvAddSupplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAddSupplier.Size = new System.Drawing.Size(973, 526);
             this.dgvAddSupplier.TabIndex = 1;
+            this.dgvAddSupplier.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAddSupplier_CellDoubleClick);
             // 
             // groupBox3
             // 
@@ -199,7 +203,6 @@
             this.cbSupplier.Name = "cbSupplier";
             this.cbSupplier.Size = new System.Drawing.Size(240, 33);
             this.cbSupplier.TabIndex = 105;
-            this.cbSupplier.SelectedIndexChanged += new System.EventHandler(this.cbSupplier_SelectedIndexChanged);
             // 
             // btnEdit
             // 
@@ -215,6 +218,7 @@
             this.btnEdit.TabIndex = 100;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnSimpan
             // 
@@ -275,7 +279,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(966, 62);
+            this.label14.Location = new System.Drawing.Point(882, 62);
             this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(224, 36);
@@ -307,6 +311,7 @@
             this.btnDelete.TabIndex = 101;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // process1
             // 
@@ -318,11 +323,50 @@
             this.process1.StartInfo.UserName = "";
             this.process1.SynchronizingObject = this;
             // 
+            // btnSup
+            // 
+            this.btnSup.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnSup.BackgroundImage = global::cashier.Properties.Resources.add1;
+            this.btnSup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSup.FlatAppearance.BorderSize = 0;
+            this.btnSup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSup.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSup.ForeColor = System.Drawing.Color.White;
+            this.btnSup.Location = new System.Drawing.Point(559, 233);
+            this.btnSup.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSup.Name = "btnSup";
+            this.btnSup.Size = new System.Drawing.Size(42, 33);
+            this.btnSup.TabIndex = 138;
+            this.btnSup.UseVisualStyleBackColor = false;
+            this.btnSup.Click += new System.EventHandler(this.btnSup_Click);
+            // 
+            // btnProduk
+            // 
+            this.btnProduk.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnProduk.BackgroundImage = global::cashier.Properties.Resources.add1;
+            this.btnProduk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnProduk.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProduk.FlatAppearance.BorderSize = 0;
+            this.btnProduk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProduk.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduk.ForeColor = System.Drawing.Color.White;
+            this.btnProduk.Location = new System.Drawing.Point(559, 344);
+            this.btnProduk.Margin = new System.Windows.Forms.Padding(6);
+            this.btnProduk.Name = "btnProduk";
+            this.btnProduk.Size = new System.Drawing.Size(42, 33);
+            this.btnProduk.TabIndex = 139;
+            this.btnProduk.UseVisualStyleBackColor = false;
+            this.btnProduk.Click += new System.EventHandler(this.btnProduk_Click);
+            // 
             // Supplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1884, 865);
+            this.Controls.Add(this.btnProduk);
+            this.Controls.Add(this.btnSup);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.tbStok);
             this.Controls.Add(this.label6);
@@ -340,7 +384,12 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnDelete);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Supplier";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "  Detail Supplier | SMK Negeri 1 Kebumen";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Supplier_FormClosed);
             this.Load += new System.EventHandler(this.Supplier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddSupplier)).EndInit();
             this.groupBox3.ResumeLayout(false);
@@ -377,5 +426,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnDelete;
         private System.Diagnostics.Process process1;
+        private System.Windows.Forms.Button btnProduk;
+        private System.Windows.Forms.Button btnSup;
     }
 }

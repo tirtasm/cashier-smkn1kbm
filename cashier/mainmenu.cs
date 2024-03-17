@@ -18,6 +18,8 @@ namespace cashier
 {
     public partial class mainmenu : Form
     {
+        public static mainmenu main;
+        
         public mainmenu()
         {
             InitializeComponent();
@@ -28,15 +30,6 @@ namespace cashier
             Application.Exit();
         }
 
-        private void mainmenu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -50,24 +43,49 @@ namespace cashier
 
         private void supplierToolStripMenuItem_Click(object sender, EventArgs e)
         {          
-            AddSupplier supplier = new AddSupplier(this);
-            supplier.Show();
+            AddSupplier addSupplier = new AddSupplier();
+            addSupplier.Show();
             supplierToolStripMenuItem.Enabled = false;
+
         }
 
         private void detailSupplierToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Supplier supplier = new Supplier(this);
+            Supplier supplier = new Supplier();
             supplier.Show();
             detailSupplierToolStripMenuItem.Enabled = false;
         }
 
         private void produkToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddProduct product = new AddProduct(this);
-            product.Show();
             produkToolStripMenuItem.Enabled = false;
+            AddProduct product = new AddProduct();
+            product.Show();
+        }
+        private void transaksiPenjualanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            transaksiPenjualanToolStripMenuItem.Enabled = false;
+            TransaksiPenjualan transaksi = new TransaksiPenjualan();
+            transaksi.Show();
+        }
 
+        private void mainmenu_Load(object sender, EventArgs e)
+        {
+            main = this;
+        }
+
+        private void reportSupplierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            reportSupplierToolStripMenuItem.Enabled = false;
+            ReportSupplier reportSupplier = new ReportSupplier();
+            reportSupplier.Show();
+        }
+
+        private void reportKeuntunganKantinToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            reportKeuntunganKantinToolStripMenuItem.Enabled = false;
+            KeuntunganKantin keuntunganKantin = new KeuntunganKantin();
+            keuntunganKantin.Show();
         }
     }
 }

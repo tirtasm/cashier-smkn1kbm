@@ -131,35 +131,23 @@
     <Compile Include="KeuntunganKantin.Designer.cs">
       <DependentUpon>KeuntunganKantin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Laporan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Laporan.Designer.cs">
-      <DependentUpon>Laporan.cs</DependentUpon>
-    </Compile>
     <Compile Include="register.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="register.Designer.cs">
       <DependentUpon>register.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportSupplier.Designer.cs">
+      <DependentUpon>ReportSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Supplier.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Supplier.Designer.cs">
       <DependentUpon>Supplier.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TransaksiPenjualan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TransaksiPenjualan.Designer.cs">
-      <DependentUpon>TransaksiPenjualan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewProduk.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewProduk.Designer.cs">
-      <DependentUpon>ViewProduk.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -181,29 +169,23 @@
     <Compile Include="AddSupplier.Designer.cs">
       <DependentUpon>AddSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewSupplier.cs">
+    <Compile Include="TransaksiPenjualan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewSupplier.Designer.cs">
-      <DependentUpon>ViewSupplier.cs</DependentUpon>
+    <Compile Include="TransaksiPenjualan.Designer.cs">
+      <DependentUpon>TransaksiPenjualan.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="KeuntunganKantin.resx">
       <DependentUpon>KeuntunganKantin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Laporan.resx">
-      <DependentUpon>Laporan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="register.resx">
       <DependentUpon>register.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportSupplier.resx">
+      <DependentUpon>ReportSupplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Supplier.resx">
       <DependentUpon>Supplier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TransaksiPenjualan.resx">
-      <DependentUpon>TransaksiPenjualan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewProduk.resx">
-      <DependentUpon>ViewProduk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -222,9 +204,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="AddSupplier.resx">
       <DependentUpon>AddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransaksiPenjualan.resx">
+      <DependentUpon>TransaksiPenjualan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -254,6 +240,15 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo tut wuri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

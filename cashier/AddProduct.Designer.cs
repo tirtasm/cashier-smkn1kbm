@@ -50,7 +50,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(72, 326);
+            this.label5.Location = new System.Drawing.Point(79, 234);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(160, 29);
@@ -73,11 +73,11 @@
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.t_cari);
             this.groupBox3.Controls.Add(this.dgvProduk);
-            this.groupBox3.Location = new System.Drawing.Point(815, 211);
+            this.groupBox3.Location = new System.Drawing.Point(705, 195);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox3.Size = new System.Drawing.Size(1303, 715);
+            this.groupBox3.Size = new System.Drawing.Size(833, 512);
             this.groupBox3.TabIndex = 64;
             this.groupBox3.TabStop = false;
             // 
@@ -96,22 +96,22 @@
             this.dgvProduk.AllowUserToDeleteRows = false;
             this.dgvProduk.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProduk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProduk.Location = new System.Drawing.Point(12, 104);
+            this.dgvProduk.Location = new System.Drawing.Point(10, 122);
             this.dgvProduk.Margin = new System.Windows.Forms.Padding(6);
             this.dgvProduk.Name = "dgvProduk";
             this.dgvProduk.ReadOnly = true;
             this.dgvProduk.RowHeadersWidth = 82;
             this.dgvProduk.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProduk.Size = new System.Drawing.Size(1279, 568);
+            this.dgvProduk.Size = new System.Drawing.Size(809, 377);
             this.dgvProduk.TabIndex = 1;
-            this.dgvProduk.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduk_CellClick);
+            this.dgvProduk.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduk_CellContentDoubleClick);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(966, 62);
+            this.label14.Location = new System.Drawing.Point(688, 45);
             this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(191, 36);
@@ -125,7 +125,7 @@
             this.b_exit.FlatAppearance.BorderSize = 0;
             this.b_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_exit.ForeColor = System.Drawing.Color.White;
-            this.b_exit.Location = new System.Drawing.Point(53, 35);
+            this.b_exit.Location = new System.Drawing.Point(34, 35);
             this.b_exit.Margin = new System.Windows.Forms.Padding(6);
             this.b_exit.Name = "b_exit";
             this.b_exit.Size = new System.Drawing.Size(112, 63);
@@ -141,7 +141,7 @@
             this.b_delete.FlatAppearance.BorderSize = 0;
             this.b_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_delete.ForeColor = System.Drawing.Color.White;
-            this.b_delete.Location = new System.Drawing.Point(486, 766);
+            this.b_delete.Location = new System.Drawing.Point(468, 478);
             this.b_delete.Margin = new System.Windows.Forms.Padding(6);
             this.b_delete.Name = "b_delete";
             this.b_delete.Size = new System.Drawing.Size(176, 63);
@@ -157,7 +157,7 @@
             this.b_edit.FlatAppearance.BorderSize = 0;
             this.b_edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_edit.ForeColor = System.Drawing.Color.White;
-            this.b_edit.Location = new System.Drawing.Point(298, 766);
+            this.b_edit.Location = new System.Drawing.Point(280, 478);
             this.b_edit.Margin = new System.Windows.Forms.Padding(6);
             this.b_edit.Name = "b_edit";
             this.b_edit.Size = new System.Drawing.Size(176, 63);
@@ -173,7 +173,7 @@
             this.b_simpan.FlatAppearance.BorderSize = 0;
             this.b_simpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b_simpan.ForeColor = System.Drawing.Color.White;
-            this.b_simpan.Location = new System.Drawing.Point(106, 766);
+            this.b_simpan.Location = new System.Drawing.Point(88, 478);
             this.b_simpan.Margin = new System.Windows.Forms.Padding(6);
             this.b_simpan.Name = "b_simpan";
             this.b_simpan.Size = new System.Drawing.Size(176, 63);
@@ -187,27 +187,26 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.panel1.Controls.Add(this.b_exit);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Location = new System.Drawing.Point(-20, 29);
+            this.panel1.Location = new System.Drawing.Point(-8, -1);
             this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2326, 137);
+            this.panel1.Size = new System.Drawing.Size(1603, 137);
             this.panel1.TabIndex = 63;
             // 
             // tbProduk
             // 
-            this.tbProduk.Location = new System.Drawing.Point(285, 325);
+            this.tbProduk.Location = new System.Drawing.Point(292, 233);
             this.tbProduk.Name = "tbProduk";
-            this.tbProduk.Size = new System.Drawing.Size(436, 31);
+            this.tbProduk.Size = new System.Drawing.Size(320, 31);
             this.tbProduk.TabIndex = 70;
-            this.tbProduk.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbProduk_KeyDown);
             // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(2243, 1025);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(1583, 789);
             this.Controls.Add(this.tbProduk);
             this.Controls.Add(this.b_delete);
             this.Controls.Add(this.groupBox3);
@@ -215,9 +214,12 @@
             this.Controls.Add(this.b_edit);
             this.Controls.Add(this.b_simpan);
             this.Controls.Add(this.label5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(26, 71);
             this.Name = "AddProduct";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product | SMKN 1 KEBUMEN";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddProduct_FormClosed);
             this.Load += new System.EventHandler(this.Product_Load);

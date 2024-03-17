@@ -144,6 +144,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRegis);
             this.Name = "register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "register";
             this.ResumeLayout(false);
             this.PerformLayout();
