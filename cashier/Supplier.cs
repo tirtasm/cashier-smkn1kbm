@@ -11,12 +11,8 @@ namespace cashier
     {
         config con = new config();
         int lastIdSup;
-        int idSup;
         int idTrx;
-        private mainmenu mainMenu;
-        
-      
-        
+        int idSup;
         public Supplier()
         {
             InitializeComponent();
@@ -95,13 +91,6 @@ namespace cashier
             }
         }
 
-  
-
-        private void cbProduk_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void b_exit_Click(object sender, EventArgs e)
         {
             mainmenu.main.detailSupplierToolStripMenuItem.Enabled = true;
@@ -117,13 +106,19 @@ namespace cashier
 
         public void Supplier_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            mainmenu.main.detailSupplierToolStripMenuItem.Enabled = true;
+            this.Hide();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Apakah Anda Yakin Ingin Menghapus Data Ini?", "Hapus Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (dialogResult == DialogResult.Yes)
+            DialogResult dialogResult = MessageBox.Show("Apakah Anda Yakin Ingin Menghapus Data Ini?", "Hapus Data", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (idTrx == 0 || idSup == 0)
+            {
+                MessageBox.Show("Pilih Data Terlebih Dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (dialogResult == DialogResult.Yes)
             {
                 con.query("DELETE FROM transaksi_supplier WHERE `transaksi_supplier`.`id_transaksi_supplier` =" + idTrx);
                 //con.query("DELETE FROM detail_supplier WHERE `detail_supplier`.`id_detail_supplier` =" + idSup);
@@ -132,9 +127,9 @@ namespace cashier
                    "supplier.id_supplier = transaksi_supplier.id_supplier JOIN produk ON produk.id_produk = detail_supplier.id_produk;", dgvAddSupplier);
                 MessageBox.Show("Data Berhasil Dihapus", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (dialogResult == DialogResult.No)
+            else
             {
-                return;
+                con.kosongkanText(this);
             }
             
         }
@@ -143,7 +138,7 @@ namespace cashier
 
             if (cbSupplier.Text == "" || cbProduk.Text == "" || cbPetugas.Text == "" || tbHarga.Text == "" || tbStok.Text == "")
             {
-                MessageBox.Show("Data Tidak Boleh Kosong");
+                MessageBox.Show("Data Tidak Boleh Kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else
@@ -157,7 +152,7 @@ namespace cashier
                 int jumlah = int.Parse(tbHarga.Text) * int.Parse(tbStok.Text);
                 con.query("UPDATE detail_supplier SET jumlah = '" + jumlah + "' WHERE id_transaksi_supplier = '" + lastIdSup + "'");
                 con.query("UPDATE transaksi_supplier SET total_harga = '" + jumlah + "' WHERE id_transaksi_supplier = '" + lastIdSup + "'");
-                MessageBox.Show("Data Berhasil Disimpan");
+                MessageBox.Show("Data Berhasil Disimpan","Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 con.kosongkanText(this);
                 con.tampil("SELECT transaksi_supplier.id_transaksi_supplier, detail_supplier.id_detail_supplier,transaksi_supplier.tanggal AS Tanggal, petugas.username AS Petugas, supplier.nama AS NamaSupplier, produk.nama AS Produk, detail_supplier.harga AS HargaSatuan, detail_supplier.stok AS Stok, detail_supplier.jumlah AS Jumlah FROM detail_supplier" +
                     " JOIN transaksi_supplier ON transaksi_supplier.id_transaksi_supplier = detail_supplier.id_transaksi_supplier JOIN petugas ON petugas.id_petugas = transaksi_supplier.id_petugas JOIN supplier ON " +
@@ -167,23 +162,52 @@ namespace cashier
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            //update data transaksi supplier    
-            con.query("UPDATE transaksi_supplier SET tanggal = '" + dtSupplier.Value.ToString("yyyy-MM-dd") + "', id_supplier= '" + cbSupplier.SelectedValue + "', id_petugas= '" + cbPetugas.SelectedValue + "' WHERE id_transaksi_supplier = '" + idTrx + "'");
-            //update data detail supplier 
-            con.query("UPDATE detail_supplier SET id_produk = '" + cbProduk.SelectedValue + "', harga = '" + tbHarga.Text + "', stok = '" + tbStok.Text + "' WHERE id_transaksi_supplier = '" + idTrx + "'");
-            int jumlah = int.Parse(tbHarga.Text) * int.Parse(tbStok.Text);
-            con.query("UPDATE detail_supplier SET jumlah = '" + jumlah + "' WHERE id_transaksi_supplier = '" + lastIdSup + "'");
-            con.tampil("SELECT transaksi_supplier.id_transaksi_supplier, detail_supplier.id_detail_supplier, transaksi_supplier.tanggal AS Tanggal, petugas.username AS Petugas, supplier.nama AS NamaSupplier, produk.nama AS Produk, detail_supplier.harga AS HargaSatuan, detail_supplier.stok AS Stok, detail_supplier.jumlah AS Jumlah FROM detail_supplier" +
-                    " JOIN transaksi_supplier ON transaksi_supplier.id_transaksi_supplier = detail_supplier.id_transaksi_supplier JOIN petugas ON petugas.id_petugas = transaksi_supplier.id_petugas JOIN supplier ON " +
-                    "supplier.id_supplier = transaksi_supplier.id_supplier JOIN produk ON produk.id_produk = detail_supplier.id_produk;", dgvAddSupplier);
-            MessageBox.Show("Data Berhasil Diedit", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            con.kosongkanText(this);
+            
+            if (idTrx== 0 || idSup == 0)
+            {
+                MessageBox.Show("Pilih Data Terlebih Dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (cbSupplier.Text == "" || cbProduk.Text == "" || cbPetugas.Text == "" || tbHarga.Text == "" || tbStok.Text == "")
+            {
+                MessageBox.Show("Pilih Data Terlebih Dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            { 
+                con.query("UPDATE transaksi_supplier SET tanggal = '" + dtSupplier.Value.ToString("yyyy-MM-dd") + "', id_supplier= '" + cbSupplier.SelectedValue + "', id_petugas= '" + cbPetugas.SelectedValue + "' WHERE id_transaksi_supplier = '" + idTrx + "'");
+                con.query("UPDATE detail_supplier SET id_produk = '" + cbProduk.SelectedValue + "', harga = '" + tbHarga.Text + "', stok = '" + tbStok.Text + "' WHERE id_transaksi_supplier = '" + idTrx + "'");
+                int jumlah = int.Parse(tbHarga.Text) * int.Parse(tbStok.Text);
+                con.query("UPDATE detail_supplier SET jumlah = '" + jumlah + "' WHERE id_transaksi_supplier = '" + idTrx + "'");
+                con.tampil("SELECT transaksi_supplier.id_transaksi_supplier, detail_supplier.id_detail_supplier, transaksi_supplier.tanggal AS Tanggal, petugas.username AS Petugas, supplier.nama AS NamaSupplier, produk.nama AS Produk, detail_supplier.harga AS HargaSatuan, detail_supplier.stok AS Stok, detail_supplier.jumlah AS Jumlah FROM detail_supplier" +
+                        " JOIN transaksi_supplier ON transaksi_supplier.id_transaksi_supplier = detail_supplier.id_transaksi_supplier JOIN petugas ON petugas.id_petugas = transaksi_supplier.id_petugas JOIN supplier ON " +
+                        "supplier.id_supplier = transaksi_supplier.id_supplier JOIN produk ON produk.id_produk = detail_supplier.id_produk;", dgvAddSupplier);
+                MessageBox.Show("Data Berhasil Diedit", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                con.kosongkanText(this);
+            }
+        }
+
+        private void btnSup_Click(object sender, EventArgs e)
+        {
+            AddSupplier sup = new AddSupplier();
+            sup.Show();
+            this.Hide();
+            mainmenu.main.detailSupplierToolStripMenuItem.Enabled = true;
+            
+        }
+
+        private void btnProduk_Click(object sender, EventArgs e)
+        {
+           AddProduct prod = new AddProduct();
+            prod.Show();
+            this.Hide();
+            mainmenu.main.detailSupplierToolStripMenuItem.Enabled = true;
+            
         }
 
         private void dgvAddSupplier_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            //menampilkan data dari datagridview ke textbox, tanggal dan combobox
-            DataGridViewRow row = dgvAddSupplier.Rows[e.RowIndex];
+            DataGridViewRow row = this.dgvAddSupplier.Rows[e.RowIndex];
             idTrx = int.Parse(row.Cells[0].Value.ToString());
             idSup = int.Parse(row.Cells[1].Value.ToString());
             dtSupplier.Text = row.Cells[2].Value.ToString();
@@ -192,20 +216,6 @@ namespace cashier
             cbProduk.Text = row.Cells[5].Value.ToString();
             tbHarga.Text = row.Cells[6].Value.ToString();
             tbStok.Text = row.Cells[7].Value.ToString();
-        }
-
-        private void btnSup_Click(object sender, EventArgs e)
-        {
-            AddSupplier sup = new AddSupplier();
-            sup.Show();
-            Hide();
-        }
-
-        private void btnProduk_Click(object sender, EventArgs e)
-        {
-           AddProduct prod = new AddProduct();
-            prod.Show();
-            Hide();
         }
     }
 }

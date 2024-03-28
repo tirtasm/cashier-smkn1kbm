@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tbPass = new System.Windows.Forms.TextBox();
             this.tbUser = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,6 +39,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.tbRetype = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tbPass
@@ -47,6 +52,7 @@
             this.tbPass.Size = new System.Drawing.Size(422, 31);
             this.tbPass.TabIndex = 12;
             this.tbPass.UseSystemPasswordChar = true;
+            this.tbPass.TextChanged += new System.EventHandler(this.tbPass_TextChanged);
             // 
             // tbUser
             // 
@@ -85,14 +91,14 @@
             // 
             // tbAlamat
             // 
-            this.tbAlamat.Location = new System.Drawing.Point(236, 370);
+            this.tbAlamat.Location = new System.Drawing.Point(236, 446);
             this.tbAlamat.Name = "tbAlamat";
             this.tbAlamat.Size = new System.Drawing.Size(422, 31);
             this.tbAlamat.TabIndex = 16;
             // 
             // tbHp
             // 
-            this.tbHp.Location = new System.Drawing.Point(236, 290);
+            this.tbHp.Location = new System.Drawing.Point(236, 370);
             this.tbHp.Name = "tbHp";
             this.tbHp.Size = new System.Drawing.Size(422, 31);
             this.tbHp.TabIndex = 15;
@@ -101,7 +107,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(231, 342);
+            this.label3.Location = new System.Drawing.Point(231, 418);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 25);
             this.label3.TabIndex = 14;
@@ -110,7 +116,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(231, 261);
+            this.label4.Location = new System.Drawing.Point(231, 341);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 25);
             this.label4.TabIndex = 13;
@@ -127,12 +133,36 @@
             this.linkLabel1.Text = "Login";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // tbRetype
+            // 
+            this.tbRetype.Location = new System.Drawing.Point(236, 289);
+            this.tbRetype.Name = "tbRetype";
+            this.tbRetype.Size = new System.Drawing.Size(422, 31);
+            this.tbRetype.TabIndex = 19;
+            this.tbRetype.UseSystemPasswordChar = true;
+            this.tbRetype.TextChanged += new System.EventHandler(this.tbRetype_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(231, 261);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(133, 25);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "RePassword";
+            // 
             // register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1039, 662);
+            this.Controls.Add(this.tbRetype);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.tbAlamat);
             this.Controls.Add(this.tbHp);
@@ -146,6 +176,8 @@
             this.Name = "register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "register";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.register_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,5 +194,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.TextBox tbRetype;
+        private System.Windows.Forms.Label label5;
     }
 }

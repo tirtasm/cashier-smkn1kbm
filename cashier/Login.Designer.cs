@@ -94,6 +94,8 @@
             this.tbPass.Size = new System.Drawing.Size(422, 31);
             this.tbPass.TabIndex = 5;
             this.tbPass.UseSystemPasswordChar = true;
+            this.tbPass.TextChanged += new System.EventHandler(this.tbPass_TextChanged);
+            this.tbPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPass_KeyPress);
             // 
             // linkLabel1
             // 

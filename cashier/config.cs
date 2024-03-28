@@ -108,6 +108,29 @@ namespace cashier
             }
             return id;
         }
-        
+    
+        public void exportToExcel(DataGridView dgv, string path)
+        {
+            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+            excel.Application.Workbooks.Add(Type.Missing);
+            for (int i = 1; i < dgv.Columns.Count + 1; i++)
+            {
+                excel.Cells[1, i] = dgv.Columns[i - 1].HeaderText;
+            }
+            for (int i = 0; i < dgv.Rows.Count; i++)
+            {
+                for (int j = 0; j < dgv.Columns.Count; j++)
+                {
+                    if (dgv.Rows[i].Cells[j].Value != null)
+                    {
+                        excel.Cells[i + 2, j + 1] = dgv.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+            }
+            excel.Columns.AutoFit();
+            excel.Visible = true;
+            Microsoft.Office.Interop.Excel.Worksheet worksheet = excel.ActiveSheet;
+            worksheet.SaveAs(path);
+        }
     }
 }

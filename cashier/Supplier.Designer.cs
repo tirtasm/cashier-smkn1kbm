@@ -166,7 +166,6 @@
             this.cbProduk.Name = "cbProduk";
             this.cbProduk.Size = new System.Drawing.Size(240, 33);
             this.cbProduk.TabIndex = 109;
-            this.cbProduk.SelectedIndexChanged += new System.EventHandler(this.cbProduk_SelectedIndexChanged);
             // 
             // cbPetugas
             // 

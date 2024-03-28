@@ -37,9 +37,17 @@ namespace cashier
 
         private void b_simpan_Click(object sender, EventArgs e)
         {
-            con.query("INSERT INTO produk (nama) VALUES ('" + tbProduk.Text + "')");
-            tbProduk.Clear();
-            con.tampil("SELECT id_produk as No, nama as NamaProduk FROM produk", dgvProduk);
+            if (tbProduk.Text == "")
+            {
+                MessageBox.Show("Data Tidak Boleh Kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                con.query("INSERT INTO produk (nama) VALUES ('" + tbProduk.Text + "')");
+                tbProduk.Clear();
+                con.tampil("SELECT id_produk as No, nama as NamaProduk FROM produk", dgvProduk);
+            }
         }
 
 
@@ -53,9 +61,21 @@ namespace cashier
         {
             try
             {
-            con.query("DELETE FROM produk WHERE id_produk = " + id);
-            tbProduk.Clear();
-            con.tampil("SELECT id_produk as No, nama as NamaProduk FROM produk", dgvProduk);
+                if (id == 0)
+                {
+                    MessageBox.Show("Pilih Data Terlebih Dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else if (MessageBox.Show("Apakah Anda Yakin Ingin Menghapus Data Ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    con.query("DELETE FROM produk WHERE id_produk = " + id);
+                    tbProduk.Clear();
+                    con.tampil("SELECT id_produk as No, nama as NamaProduk FROM produk", dgvProduk);
+                }
+                else
+                {
+                    con.kosongkanText(this);
+                }
             }
             catch (Exception x)
             {
@@ -66,15 +86,28 @@ namespace cashier
 
         private void t_cari_TextChanged(object sender, EventArgs e)
         {
-            con.tampil("SELECT * FROM produk WHERE nama LIKE '%" + t_cari.Text + "%'", dgvProduk);
+            con.tampil("SELECT id_produk as No, nama as NamaProduk FROM produk WHERE nama LIKE '%" + t_cari.Text + "%'", dgvProduk);
+            dgvProduk.Columns[0].Visible = false;
         }
 
         private void b_edit_Click(object sender, EventArgs e)
         {
-            
-            con.query("UPDATE produk SET nama = '" + tbProduk.Text + "' WHERE id_produk = " + id);
-            tbProduk.Clear();
-            con.tampil("SELECT id_produk as No, nama as NamaProduk FROM produk", dgvProduk);
+            if (id == 0)
+            {
+                MessageBox.Show("Pilih Data Terlebih Dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (tbProduk.Text == "")
+            {
+                MessageBox.Show("Data Tidak Boleh Kosong");
+                return;
+            }
+            else
+            {
+                con.query("UPDATE produk SET nama = '" + tbProduk.Text + "' WHERE id_produk = " + id);
+                tbProduk.Clear();
+                con.tampil("SELECT id_produk as No, nama as NamaProduk FROM produk", dgvProduk);
+            }
 
         }
 
@@ -83,6 +116,16 @@ namespace cashier
             DataGridViewRow dr = dgvProduk.Rows[e.RowIndex];
             id = Convert.ToInt32(dr.Cells[0].Value);
             tbProduk.Text = dr.Cells[1].Value.ToString();
+        }
+
+        private void AddProduct_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void b_simpan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

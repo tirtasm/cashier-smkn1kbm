@@ -87,5 +87,17 @@ namespace cashier
             KeuntunganKantin keuntunganKantin = new KeuntunganKantin();
             keuntunganKantin.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void petugasKantinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            petugasKantinToolStripMenuItem.Enabled = false;
+            Petugas pet= new Petugas();
+            pet.Show();
+        }
     }
 }

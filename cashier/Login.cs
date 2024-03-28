@@ -62,11 +62,7 @@ namespace cashier
 
         private void tbUser_KeyDown(object sender, KeyEventArgs e)
         {
-            //jika tombol enter ditekan maka akan pindah ke textbox password
-            if(e.KeyCode == Keys.Enter)
-            {
-                tbPass.Focus();
-            }
+            
 
 
         }
@@ -87,6 +83,19 @@ namespace cashier
             else
             {
                 tbPass.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void tbPass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                btnLogin.PerformClick();
             }
         }
     }

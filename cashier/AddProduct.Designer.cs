@@ -181,6 +181,7 @@
             this.b_simpan.Text = "Simpan";
             this.b_simpan.UseVisualStyleBackColor = false;
             this.b_simpan.Click += new System.EventHandler(this.b_simpan_Click);
+            this.b_simpan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.b_simpan_KeyPress);
             // 
             // panel1
             // 
@@ -223,6 +224,7 @@
             this.Text = "Product | SMKN 1 KEBUMEN";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddProduct_FormClosed);
             this.Load += new System.EventHandler(this.Product_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddProduct_KeyDown);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduk)).EndInit();

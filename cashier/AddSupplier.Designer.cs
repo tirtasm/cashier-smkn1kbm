@@ -231,7 +231,7 @@
             this.dgvSupplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSupplier.Size = new System.Drawing.Size(881, 448);
             this.dgvSupplier.TabIndex = 1;
-            this.dgvSupplier.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSupplier_CellContentDoubleClick);
+            this.dgvSupplier.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSupplier_CellDoubleClick);
             // 
             // tbTelp
             // 

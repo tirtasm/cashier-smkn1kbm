@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Bcpg.Sig;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,7 +31,7 @@ namespace cashier
         {
             if (tbUser.Text == "" || tbPass.Text == "" || tbHp.Text == "" || tbAlamat.Text == "")
             {
-                MessageBox.Show("Data Tidak Boleh Kosong");
+                MessageBox.Show("Data Tidak Boleh Kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             conn.query("INSERT INTO petugas (username, password, no_telp, alamat) VALUES ('" + tbUser.Text + "','" + tbPass.Text + "','" + tbHp.Text + "','" + tbAlamat.Text + "')");
@@ -48,6 +49,43 @@ namespace cashier
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '+')
             {
                 e.Handled = true;
+            }
+        }
+
+        private void tbPass_TextChanged(object sender, EventArgs e)
+        {
+            //text harus lebih dari 6 karakter
+            if (tbPass.Text.Length <= 6)
+            {
+                errorProvider1.SetError(tbPass, "Password harus lebih dari 6 karakter");
+                btnRegis.Enabled = false;
+            }
+            else
+            {
+                errorProvider1.Clear();
+                btnRegis.Enabled = true;
+            }
+        }
+
+        private void tbRetype_TextChanged(object sender, EventArgs e)
+        {
+            if (tbPass.Text != tbRetype.Text)
+            {
+                errorProvider1.SetError(tbRetype, "Password Harus Sama");
+                btnRegis.Enabled= false;
+            }
+            else
+            {
+                errorProvider1.Clear();
+                btnRegis.Enabled= true;
+            }
+        }
+
+        private void register_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
             }
         }
     }

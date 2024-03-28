@@ -24,11 +24,19 @@ namespace cashier
 
         private void b_simpan_Click(object sender, EventArgs e)
         {
-            con.query("INSERT INTO supplier (nama, alamat, no_telp) VALUES ('" + tbNama.Text + "','" + tbAlamat.Text + "','" + tbTelp.Text + "')");
-            MessageBox.Show("Data Berhasil Disimpan");
+            if(tbAlamat.Text == "" || tbNama.Text == "" || tbTelp.Text == "")
+            {
+                MessageBox.Show("Data Tidak Boleh Kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                con.query("INSERT INTO supplier (nama, alamat, no_telp) VALUES ('" + tbNama.Text + "','" + tbAlamat.Text + "','" + tbTelp.Text + "')");
+                MessageBox.Show("Data Berhasil Disimpan");
 
-            con.tampil("SELECT id_supplier as No, nama as Nama, no_telp as NoTelp, alamat as Alamat FROM supplier", dgvSupplier);
-            con.kosongkanText(this);
+                con.tampil("SELECT id_supplier as No, nama as Nama, no_telp as NoTelp, alamat as Alamat FROM supplier", dgvSupplier);
+                con.kosongkanText(this);
+            }
         }
 
         private void b_exit_Click(object sender, EventArgs e)
@@ -39,8 +47,8 @@ namespace cashier
 
         private void AddSupplier_FormClosed(object sender, FormClosedEventArgs e)
         {
-            /*mainmenu mainmenu = new mainmenu();
-            mainmenu.Enabled = true;*/
+            mainmenu.main.supplierToolStripMenuItem.Enabled = true;
+            this.Hide();
         }
 
         private void AddSupplier_Load(object sender, EventArgs e)
@@ -48,25 +56,46 @@ namespace cashier
             con.tampil("SELECT id_supplier as No, nama as Nama, no_telp as NoTelp, alamat as Alamat FROM supplier", dgvSupplier);
             this.Size = new Size(840, 440);
             dgvSupplier.Columns[0].Visible = false;
-        }
-
-        private void tbCari_TextChanged(object sender, EventArgs e)
-        {
-            /*conn.tampil("SELECT * FROM supplier WHERE no_telp or nama LIKE '%" + tbCari.Text + "%'", dgvSupplier);*/
-
+            
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            con.query("DELETE FROM supplier WHERE id_supplier= " + id);
-            con.kosongkanText(this);
-            con.tampil("SELECT id_supplier as No, nama as Nama, no_telp as NoTelp, alamat as Alamat FROM supplier", dgvSupplier);
+
+            if (id == 0)
+            {
+                MessageBox.Show("Pilih Data Terlebih Dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (MessageBox.Show("Apakah Anda Yakin Ingin Menghapus Data Ini?", "Hapus Data", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                con.query("DELETE FROM supplier WHERE id_supplier = " + id);
+                con.tampil("SELECT id_supplier as No, nama as Nama, no_telp as NoTelp, alamat as Alamat FROM supplier", dgvSupplier);
+                con.kosongkanText(this);
+            }
+            else
+            {
+                con.kosongkanText(this);
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            con.query("UPDATE supplier SET nama = '" + tbNama.Text + "', alamat='" + tbAlamat.Text + "', no_telp='" + tbTelp.Text + "' WHERE id_supplier = " + id);
-            con.kosongkanText(this);
-            con.tampil("SELECT id_supplier as No, nama as Nama, no_telp as NoTelp, alamat as Alamat FROM supplier", dgvSupplier);
+            if (id == 0)
+            {
+                MessageBox.Show("Pilih Data Terlebih Dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (tbAlamat.Text == "" || tbNama.Text == "" || tbTelp.Text == "")
+            {
+                MessageBox.Show("Data Tidak Boleh Kosong");
+                return;
+            }
+            else
+            {
+                con.query("UPDATE supplier SET nama = '" + tbNama.Text + "', alamat='" + tbAlamat.Text + "', no_telp='" + tbTelp.Text + "' WHERE id_supplier = " + id);
+                con.kosongkanText(this);
+                con.tampil("SELECT id_supplier as No, nama as Nama, no_telp as NoTelp, alamat as Alamat FROM supplier", dgvSupplier);
+            }
         }
         private void tbTelp_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -77,16 +106,21 @@ namespace cashier
         }
         private void tbCari_TextChanged_1(object sender, EventArgs e)
         {
-            con.tampil("SELECT * FROM supplier WHERE nama LIKE '%" +tbCari.Text +"%'", dgvSupplier);
+            con.tampil("SELECT id_supplier as No, nama as Nama, no_telp as NoTelp, alamat as Alamat FROM supplier WHERE Nama LIKE '%"+tbCari.Text+"%'", dgvSupplier);
+            dgvSupplier.Columns[0].Visible = false;
         }
         private void dgvSupplier_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-                DataGridViewRow dr = dgvSupplier.Rows[e.RowIndex];
-                id = Convert.ToInt32(dr.Cells[0].Value);
-                tbNama.Text = dr.Cells[1].Value.ToString();
-                tbTelp.Text = dr.Cells[2].Value.ToString();
-                tbAlamat.Text = dr.Cells[3].Value.ToString();
             
+        }
+
+        private void dgvSupplier_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow dr = dgvSupplier.Rows[e.RowIndex];
+            id = int.Parse(dr.Cells[0].Value.ToString());
+            tbNama.Text = dr.Cells[1].Value.ToString();
+            tbTelp.Text = dr.Cells[2].Value.ToString();
+            tbAlamat.Text = dr.Cells[3].Value.ToString();
         }
     }
 }
