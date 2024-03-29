@@ -34,10 +34,10 @@
             this.tbCari = new System.Windows.Forms.TextBox();
             this.dgvKeuntungan = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnExport = new System.Windows.Forms.Button();
             this.b_exit = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKeuntungan)).BeginInit();
             this.panel1.SuspendLayout();
@@ -49,7 +49,7 @@
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.tbCari);
             this.groupBox3.Controls.Add(this.dgvKeuntungan);
-            this.groupBox3.Location = new System.Drawing.Point(50, 168);
+            this.groupBox3.Location = new System.Drawing.Point(34, 168);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(6);
@@ -104,6 +104,22 @@
             this.panel1.Size = new System.Drawing.Size(2382, 137);
             this.panel1.TabIndex = 152;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1637, 35);
+            this.button1.Margin = new System.Windows.Forms.Padding(6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 63);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Edit";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnExport
             // 
             this.btnExport.BackColor = System.Drawing.Color.ForestGreen;
@@ -148,22 +164,6 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Keuntungan Kantin";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1637, 35);
-            this.button1.Margin = new System.Windows.Forms.Padding(6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 63);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // KeuntunganKantin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -174,7 +174,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "KeuntunganKantin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "KeuntunganKantin";
+            this.Text = " Keuntungan Kantin | SMKN 1 Kebumen";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.KeuntunganKantin_FormClosed);
             this.Load += new System.EventHandler(this.KeuntunganKantin_Load);
             this.groupBox3.ResumeLayout(false);

@@ -221,7 +221,7 @@
             this.MinimumSize = new System.Drawing.Size(26, 71);
             this.Name = "AddProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Product | SMKN 1 KEBUMEN";
+            this.Text = " Produk | SMKN 1 Kebumen";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddProduct_FormClosed);
             this.Load += new System.EventHandler(this.Product_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddProduct_KeyDown);

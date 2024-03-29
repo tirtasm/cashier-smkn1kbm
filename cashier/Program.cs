@@ -17,7 +17,7 @@ namespace cashier
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-             Application.Run(new Petugas());
+             Application.Run(new Login());
 
             
 

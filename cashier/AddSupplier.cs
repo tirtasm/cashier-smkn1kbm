@@ -24,7 +24,18 @@ namespace cashier
 
         private void b_simpan_Click(object sender, EventArgs e)
         {
-            if(tbAlamat.Text == "" || tbNama.Text == "" || tbTelp.Text == "")
+            if (!tbTelp.Text.StartsWith("+62") && !tbTelp.Text.StartsWith("08"))
+            {
+                MessageBox.Show("Nomor HP harus diawali dengan +62 atau 08", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            else if (tbTelp.Text.Length < 11)
+            {
+                MessageBox.Show("Nomor HP harus lebih dari 11 digit", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (tbAlamat.Text == "" || tbNama.Text == "" || tbTelp.Text == "")
             {
                 MessageBox.Show("Data Tidak Boleh Kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -83,6 +94,17 @@ namespace cashier
             if (id == 0)
             {
                 MessageBox.Show("Pilih Data Terlebih Dahulu", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (!tbTelp.Text.StartsWith("+62") && !tbTelp.Text.StartsWith("08"))
+            {
+                MessageBox.Show("Nomor HP harus diawali dengan +62 atau 08", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            else if (tbTelp.Text.Length < 11)
+            {
+                MessageBox.Show("Nomor HP harus lebih dari 11 digit", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else if (tbAlamat.Text == "" || tbNama.Text == "" || tbTelp.Text == "")

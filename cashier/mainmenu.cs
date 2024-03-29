@@ -95,7 +95,7 @@ namespace cashier
 
         private void petugasKantinToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            petugasKantinToolStripMenuItem.Enabled = false;
+            petugasKantinToolStripMenuItem.Enabled = true;
             Petugas pet= new Petugas();
             pet.Show();
         }

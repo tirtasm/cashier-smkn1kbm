@@ -387,7 +387,7 @@
             this.MaximizeBox = false;
             this.Name = "Supplier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "  Detail Supplier | SMK Negeri 1 Kebumen";
+            this.Text = " Detail Supplier | SMKN 1 Kebumen";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Supplier_FormClosed);
             this.Load += new System.EventHandler(this.Supplier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddSupplier)).EndInit();

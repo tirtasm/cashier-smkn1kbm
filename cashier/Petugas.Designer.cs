@@ -56,7 +56,7 @@
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(346, 542);
+            this.btnDelete.Location = new System.Drawing.Point(344, 461);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(6);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(176, 63);
@@ -155,7 +155,7 @@
             // 
             // tbAlamat
             // 
-            this.tbAlamat.Location = new System.Drawing.Point(294, 366);
+            this.tbAlamat.Location = new System.Drawing.Point(294, 360);
             this.tbAlamat.Name = "tbAlamat";
             this.tbAlamat.Size = new System.Drawing.Size(300, 31);
             this.tbAlamat.TabIndex = 108;
@@ -164,7 +164,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(68, 312);
+            this.label6.Location = new System.Drawing.Point(68, 306);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(142, 29);
@@ -182,7 +182,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(68, 366);
+            this.label3.Location = new System.Drawing.Point(68, 360);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 29);
@@ -196,7 +196,7 @@
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(136, 542);
+            this.btnEdit.Location = new System.Drawing.Point(134, 461);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(6);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(176, 63);
@@ -212,13 +212,13 @@
             this.label5.Location = new System.Drawing.Point(68, 255);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 29);
+            this.label5.Size = new System.Drawing.Size(124, 29);
             this.label5.TabIndex = 103;
-            this.label5.Text = "Nama Supplier";
+            this.label5.Text = "Username";
             // 
             // tbTelp
             // 
-            this.tbTelp.Location = new System.Drawing.Point(294, 312);
+            this.tbTelp.Location = new System.Drawing.Point(294, 306);
             this.tbTelp.Name = "tbTelp";
             this.tbTelp.Size = new System.Drawing.Size(300, 31);
             this.tbTelp.TabIndex = 110;
@@ -243,7 +243,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Petugas";
-            this.Text = "Petugas";
+            this.Text = " Petugas | SMKN 1 Kebumen";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Petugas_FormClosed);
             this.Load += new System.EventHandler(this.Petugas_Load);
             this.panel1.ResumeLayout(false);

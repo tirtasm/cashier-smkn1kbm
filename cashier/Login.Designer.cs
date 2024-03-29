@@ -41,7 +41,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(166, 568);
+            this.btnLogin.Location = new System.Drawing.Point(168, 540);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(145, 60);
             this.btnLogin.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(363, 568);
+            this.btnClose.Location = new System.Drawing.Point(365, 540);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(145, 60);
             this.btnClose.TabIndex = 1;
@@ -71,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(130, 429);
+            this.label2.Location = new System.Drawing.Point(130, 391);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 25);
             this.label2.TabIndex = 3;
@@ -89,7 +89,7 @@
             // 
             // tbPass
             // 
-            this.tbPass.Location = new System.Drawing.Point(135, 457);
+            this.tbPass.Location = new System.Drawing.Point(135, 419);
             this.tbPass.Name = "tbPass";
             this.tbPass.Size = new System.Drawing.Size(422, 31);
             this.tbPass.TabIndex = 5;
@@ -100,7 +100,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(287, 665);
+            this.linkLabel1.Location = new System.Drawing.Point(289, 637);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(92, 25);
             this.linkLabel1.TabIndex = 6;
@@ -111,7 +111,7 @@
             // checkBox
             // 
             this.checkBox.AutoSize = true;
-            this.checkBox.Location = new System.Drawing.Point(135, 511);
+            this.checkBox.Location = new System.Drawing.Point(135, 478);
             this.checkBox.Name = "checkBox";
             this.checkBox.Size = new System.Drawing.Size(197, 29);
             this.checkBox.TabIndex = 7;
@@ -139,7 +139,7 @@
             this.Name = "Login";
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login | SMKN 1 Kebumen";
+            this.Text = " Login | SMKN 1 Kebumen";
             this.ResumeLayout(false);
             this.PerformLayout();
 

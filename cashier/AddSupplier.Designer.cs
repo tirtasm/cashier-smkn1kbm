@@ -263,7 +263,7 @@
             this.MaximizeBox = false;
             this.Name = "AddSupplier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Supplier | SMKN 1 Kebumen";
+            this.Text = " Supplier | SMKN 1 Kebumen";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddSupplier_FormClosed);
             this.Load += new System.EventHandler(this.AddSupplier_Load);
             this.panel1.ResumeLayout(false);

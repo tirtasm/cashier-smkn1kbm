@@ -29,7 +29,19 @@ namespace cashier
 
         private void btnRegis_Click(object sender, EventArgs e)
         {
-            if (tbUser.Text == "" || tbPass.Text == "" || tbHp.Text == "" || tbAlamat.Text == "")
+            //jika nomor hp depannya tidak +62 dan 08 maka akan muncul peringatan 
+            if (!tbHp.Text.StartsWith("+62") && !tbHp.Text.StartsWith("08"))
+            {
+                MessageBox.Show("Nomor HP harus diawali dengan +62 atau 08", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+           
+            else if (tbHp.Text.Length < 11)
+            {
+                MessageBox.Show("Nomor HP harus lebih dari 11 digit", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (tbUser.Text == "" || tbPass.Text == "" || tbHp.Text == "" || tbAlamat.Text == "" || tbRetype.Text == "")
             {
                 MessageBox.Show("Data Tidak Boleh Kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -55,7 +67,7 @@ namespace cashier
         private void tbPass_TextChanged(object sender, EventArgs e)
         {
             //text harus lebih dari 6 karakter
-            if (tbPass.Text.Length <= 6)
+            if (tbPass.Text.Length < 6)
             {
                 errorProvider1.SetError(tbPass, "Password harus lebih dari 6 karakter");
                 btnRegis.Enabled = false;

@@ -40,8 +40,8 @@
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportKeuntunganKantinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
             this.petugasKantinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +55,7 @@
             this.reportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1444, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(1444, 40);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -64,7 +64,7 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.logOutToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(71, 38);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(71, 36);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // logOutToolStripMenuItem
@@ -83,7 +83,7 @@
             this.detailSupplierToolStripMenuItem,
             this.transaksiPenjualanToolStripMenuItem});
             this.masterDataToolStripMenuItem.Name = "masterDataToolStripMenuItem";
-            this.masterDataToolStripMenuItem.Size = new System.Drawing.Size(163, 38);
+            this.masterDataToolStripMenuItem.Size = new System.Drawing.Size(163, 36);
             this.masterDataToolStripMenuItem.Text = "Master Data";
             // 
             // supplierToolStripMenuItem
@@ -125,7 +125,7 @@
             this.reportKeuntunganKantinToolStripMenuItem,
             this.petugasKantinToolStripMenuItem});
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
-            this.reportToolStripMenuItem.Size = new System.Drawing.Size(104, 38);
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(104, 36);
             this.reportToolStripMenuItem.Text = "Report";
             // 
             // reportSupplierToolStripMenuItem
@@ -144,6 +144,15 @@
             this.reportKeuntunganKantinToolStripMenuItem.Text = "Report Keuntungan Kantin";
             this.reportKeuntunganKantinToolStripMenuItem.Click += new System.EventHandler(this.reportKeuntunganKantinToolStripMenuItem1_Click);
             // 
+            // petugasKantinToolStripMenuItem
+            // 
+            this.petugasKantinToolStripMenuItem.Name = "petugasKantinToolStripMenuItem";
+            this.petugasKantinToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.K)));
+            this.petugasKantinToolStripMenuItem.Size = new System.Drawing.Size(511, 44);
+            this.petugasKantinToolStripMenuItem.Text = "Petugas Kantin";
+            this.petugasKantinToolStripMenuItem.Visible = false;
+            this.petugasKantinToolStripMenuItem.Click += new System.EventHandler(this.petugasKantinToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -160,14 +169,6 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // petugasKantinToolStripMenuItem
-            // 
-            this.petugasKantinToolStripMenuItem.Name = "petugasKantinToolStripMenuItem";
-            this.petugasKantinToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.K)));
-            this.petugasKantinToolStripMenuItem.Size = new System.Drawing.Size(511, 44);
-            this.petugasKantinToolStripMenuItem.Text = "Petugas Kantin";
-            this.petugasKantinToolStripMenuItem.Click += new System.EventHandler(this.petugasKantinToolStripMenuItem_Click);
-            // 
             // mainmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -181,7 +182,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "mainmenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainMenu | SMKN 1 Kebumen";
+            this.Text = " Main Menu | SMKN 1 Kebumen";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mainmenu_FormClosing);
             this.Load += new System.EventHandler(this.mainmenu_Load);

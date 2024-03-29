@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportSupplier));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnAllDay = new System.Windows.Forms.Button();
+            this.btnToday = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.tbCari = new System.Windows.Forms.TextBox();
             this.dgvSupp = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.b_exit = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.btnToday = new System.Windows.Forms.Button();
-            this.btnAllDay = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSupp)).BeginInit();
             this.panel1.SuspendLayout();
@@ -58,6 +58,32 @@
             this.groupBox3.Size = new System.Drawing.Size(2091, 1087);
             this.groupBox3.TabIndex = 151;
             this.groupBox3.TabStop = false;
+            // 
+            // btnAllDay
+            // 
+            this.btnAllDay.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnAllDay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAllDay.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAllDay.Location = new System.Drawing.Point(1871, 29);
+            this.btnAllDay.Name = "btnAllDay";
+            this.btnAllDay.Size = new System.Drawing.Size(175, 45);
+            this.btnAllDay.TabIndex = 45;
+            this.btnAllDay.Text = "Semua Hari";
+            this.btnAllDay.UseVisualStyleBackColor = false;
+            this.btnAllDay.Click += new System.EventHandler(this.btnAllDay_Click);
+            // 
+            // btnToday
+            // 
+            this.btnToday.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnToday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnToday.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnToday.Location = new System.Drawing.Point(1672, 29);
+            this.btnToday.Name = "btnToday";
+            this.btnToday.Size = new System.Drawing.Size(175, 45);
+            this.btnToday.TabIndex = 44;
+            this.btnToday.Text = "Hari Ini";
+            this.btnToday.UseVisualStyleBackColor = false;
+            this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
             // 
             // label13
             // 
@@ -132,32 +158,6 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Detail Penjualan";
             // 
-            // btnToday
-            // 
-            this.btnToday.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnToday.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnToday.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnToday.Location = new System.Drawing.Point(1672, 29);
-            this.btnToday.Name = "btnToday";
-            this.btnToday.Size = new System.Drawing.Size(175, 45);
-            this.btnToday.TabIndex = 44;
-            this.btnToday.Text = "Hari Ini";
-            this.btnToday.UseVisualStyleBackColor = false;
-            this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
-            // 
-            // btnAllDay
-            // 
-            this.btnAllDay.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnAllDay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAllDay.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnAllDay.Location = new System.Drawing.Point(1871, 29);
-            this.btnAllDay.Name = "btnAllDay";
-            this.btnAllDay.Size = new System.Drawing.Size(175, 45);
-            this.btnAllDay.TabIndex = 45;
-            this.btnAllDay.Text = "Semua Hari";
-            this.btnAllDay.UseVisualStyleBackColor = false;
-            this.btnAllDay.Click += new System.EventHandler(this.btnAllDay_Click);
-            // 
             // ReportSupplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -168,7 +168,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReportSupplier";
-            this.Text = "  Laporan Supplier";
+            this.Text = " Laporan Supplier | SMKN 1 Kebumen";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ReportSupplier_FormClosed);
             this.Load += new System.EventHandler(this.ReportSupplier_Load);
             this.groupBox3.ResumeLayout(false);
