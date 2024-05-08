@@ -51,7 +51,7 @@
             this.tbPass.Location = new System.Drawing.Point(236, 210);
             this.tbPass.Name = "tbPass";
             this.tbPass.Size = new System.Drawing.Size(422, 31);
-            this.tbPass.TabIndex = 12;
+            this.tbPass.TabIndex = 2;
             this.tbPass.UseSystemPasswordChar = true;
             this.tbPass.TextChanged += new System.EventHandler(this.tbPass_TextChanged);
             // 
@@ -60,7 +60,7 @@
             this.tbUser.Location = new System.Drawing.Point(236, 132);
             this.tbUser.Name = "tbUser";
             this.tbUser.Size = new System.Drawing.Size(422, 31);
-            this.tbUser.TabIndex = 11;
+            this.tbUser.TabIndex = 1;
             // 
             // label2
             // 
@@ -85,7 +85,7 @@
             this.btnRegis.Location = new System.Drawing.Point(690, 438);
             this.btnRegis.Name = "btnRegis";
             this.btnRegis.Size = new System.Drawing.Size(145, 60);
-            this.btnRegis.TabIndex = 8;
+            this.btnRegis.TabIndex = 6;
             this.btnRegis.Text = "Register";
             this.btnRegis.UseVisualStyleBackColor = true;
             this.btnRegis.Click += new System.EventHandler(this.btnRegis_Click);
@@ -95,14 +95,14 @@
             this.tbAlamat.Location = new System.Drawing.Point(236, 446);
             this.tbAlamat.Name = "tbAlamat";
             this.tbAlamat.Size = new System.Drawing.Size(422, 31);
-            this.tbAlamat.TabIndex = 16;
+            this.tbAlamat.TabIndex = 5;
             // 
             // tbHp
             // 
             this.tbHp.Location = new System.Drawing.Point(236, 370);
             this.tbHp.Name = "tbHp";
             this.tbHp.Size = new System.Drawing.Size(422, 31);
-            this.tbHp.TabIndex = 15;
+            this.tbHp.TabIndex = 4;
             this.tbHp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbHp_KeyPress);
             // 
             // label3
@@ -129,7 +129,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(198, 556);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(65, 25);
-            this.linkLabel1.TabIndex = 17;
+            this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Login";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
@@ -143,7 +143,7 @@
             this.tbRetype.Location = new System.Drawing.Point(236, 289);
             this.tbRetype.Name = "tbRetype";
             this.tbRetype.Size = new System.Drawing.Size(422, 31);
-            this.tbRetype.TabIndex = 19;
+            this.tbRetype.TabIndex = 3;
             this.tbRetype.UseSystemPasswordChar = true;
             this.tbRetype.TextChanged += new System.EventHandler(this.tbRetype_TextChanged);
             // 

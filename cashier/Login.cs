@@ -71,7 +71,7 @@ namespace cashier
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("Terjadi masalah pada koneksi database.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 

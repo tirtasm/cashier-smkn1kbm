@@ -83,6 +83,16 @@ namespace cashier.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_smk {
+            get {
+                object obj = ResourceManager.GetObject("logo smk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_tut_wuri {
             get {
                 object obj = ResourceManager.GetObject("logo tut wuri", resourceCulture);

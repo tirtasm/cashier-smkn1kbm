@@ -27,7 +27,7 @@ namespace cashier
             try
             {
                 
-                db = "datasource=localhost;username=root;password=;database=kantinv2"; 
+                db = "datasource=localhost;username=root;password=0000;database=kantinv2"; 
                 conn = new MySqlConnection(db);
                 conn.Open();
             }

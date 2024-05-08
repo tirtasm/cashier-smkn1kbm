@@ -30,9 +30,10 @@ namespace cashier
         private void btnRegis_Click(object sender, EventArgs e)
         {
             //jika nomor hp depannya tidak +62 dan 08 maka akan muncul peringatan 
-            if (!tbHp.Text.StartsWith("+62") && !tbHp.Text.StartsWith("08"))
+
+            if (tbUser.Text == "" || tbPass.Text == "" || tbHp.Text == "" || tbAlamat.Text == "" || tbRetype.Text == "")
             {
-                MessageBox.Show("Nomor HP harus diawali dengan +62 atau 08", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Data Tidak Boleh Kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
            
@@ -41,17 +42,25 @@ namespace cashier
                 MessageBox.Show("Nomor HP harus lebih dari 11 digit", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            else if (tbUser.Text == "" || tbPass.Text == "" || tbHp.Text == "" || tbAlamat.Text == "" || tbRetype.Text == "")
+            else if (!tbHp.Text.StartsWith("+62") && !tbHp.Text.StartsWith("08"))
             {
-                MessageBox.Show("Data Tidak Boleh Kosong", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                
+                MessageBox.Show("Nomor HP harus diawali dengan +62 atau 08", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             conn.query("INSERT INTO petugas (username, password, no_telp, alamat) VALUES ('" + tbUser.Text + "','" + tbPass.Text + "','" + tbHp.Text + "','" + tbAlamat.Text + "')");
-            MessageBox.Show("Registrasi Berhasil");
+            MessageBox.Show("Registrasi Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Login login = new Login();
             login.Show();
             Hide();
             conn.kosongkanText(this);
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Registrasi Gagal.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Terjadi masalah pada koneksi database.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            
 
 
         }
