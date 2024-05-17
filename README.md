@@ -1,6 +1,6 @@
 # Kantin Sekolah 
 
-Foobar is a Python library for dealing with word pluralization.
+This project aims to create a desktop application that helps the canteen staff at SMKN 1 Kebumen manage stock, remaining stock, and profit from suppliers digitally. This application is used by the admin to edit and update supplier data and calculate canteen profits more efficiently. The sharing of results is still done offline.
 
 ## 🛠️ Installation
 
