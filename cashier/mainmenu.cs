@@ -72,6 +72,11 @@ namespace cashier
         private void mainmenu_Load(object sender, EventArgs e)
         {
             main = this;
+
+            
+
+            
+
         }
 
         private void reportSupplierToolStripMenuItem_Click(object sender, EventArgs e)
@@ -99,5 +104,7 @@ namespace cashier
             Petugas pet= new Petugas();
             pet.Show();
         }
+
+        
     }
 }

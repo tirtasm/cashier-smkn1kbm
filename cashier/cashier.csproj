@@ -256,6 +256,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="README.md" />
     <None Include="Resources\logo tut wuri.png" />
   </ItemGroup>
   <ItemGroup>

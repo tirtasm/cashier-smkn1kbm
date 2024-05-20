@@ -178,6 +178,7 @@
             this.Name = "register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Register | SMKN 1 Kebumen";
+            this.Load += new System.EventHandler(this.register_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.register_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);

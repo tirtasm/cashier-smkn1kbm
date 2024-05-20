@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cashier", "cashier\cashier.csproj", "{C3186D40-290B-4FC0-A1EF-4F77DCDB6495}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Kantin", "Kantin\Kantin.vdproj", "{D51CE033-7356-4ECE-B303-8F88A2EAC72E}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Kantin Sekolah", "Kantin Sekolah\Kantin Sekolah.vdproj", "{60C50B1B-7136-4E84-8E3D-7F4E6EB67BD5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{C3186D40-290B-4FC0-A1EF-4F77DCDB6495}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3186D40-290B-4FC0-A1EF-4F77DCDB6495}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3186D40-290B-4FC0-A1EF-4F77DCDB6495}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D51CE033-7356-4ECE-B303-8F88A2EAC72E}.Debug|Any CPU.ActiveCfg = Debug
-		{D51CE033-7356-4ECE-B303-8F88A2EAC72E}.Release|Any CPU.ActiveCfg = Release
+		{60C50B1B-7136-4E84-8E3D-7F4E6EB67BD5}.Debug|Any CPU.ActiveCfg = Debug
+		{60C50B1B-7136-4E84-8E3D-7F4E6EB67BD5}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

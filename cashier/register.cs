@@ -46,19 +46,17 @@ namespace cashier
             {
                 
                 MessageBox.Show("Nomor HP harus diawali dengan +62 atau 08", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            conn.query("INSERT INTO petugas (username, password, no_telp, alamat) VALUES ('" + tbUser.Text + "','" + tbPass.Text + "','" + tbHp.Text + "','" + tbAlamat.Text + "')");
-            MessageBox.Show("Registrasi Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Login login = new Login();
-            login.Show();
-            Hide();
-            conn.kosongkanText(this);
+           
                 return;
             }
             else
             {
-                MessageBox.Show("Registrasi Gagal.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                MessageBox.Show("Terjadi masalah pada koneksi database.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                conn.query("INSERT INTO petugas (username, password, no_telp, alamat) VALUES ('" + tbUser.Text + "','" + tbPass.Text + "','" + tbHp.Text + "','" + tbAlamat.Text + "')");
+                Login login = new Login();
+                MessageBox.Show("Registrasi Berhasil", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                login.Show();
+                Hide();
+                conn.kosongkanText(this);
             }
             
 
@@ -108,6 +106,11 @@ namespace cashier
             {
                 this.Close();
             }
+        }
+
+        private void register_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

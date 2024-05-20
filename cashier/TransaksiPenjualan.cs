@@ -68,7 +68,7 @@ namespace cashier
         private void TransaksiPenjualan_Load(object sender, EventArgs e)
         {
             con.tampil("SELECT tp.id_transaksi_penjualan AS idTrx, dp.id_detail_penjualan, tp.tanggal AS Tanggal, pet.username AS NamaPetugas, sup.nama AS NamaSupplier, produk.nama AS NamaProduk, dp.harga_jual AS Harga, dp.stok_terjual AS Terjual, dp.total_penjualan AS Total, tp.keuntungan AS Keuntungan, tp.status AS Status" +
-                " FROM transaksi_penjualan AS tp JOIN detail_penjualan AS dp ON tp.id_transaksi_penjualan = dp.id_transaksi_penjualan JOIN supplier AS sup ON sup.id_supplier = tp.id_supplier JOIN petugas AS pet ON pet.id_petugas = tp.id_petugas JOIN produk ON produk.id_produk = tp.id_produk JOIN transaksi_supplier AS ts ON ts.id_transaksi_supplier = dp.id_transaksi_supplier;", dgvTrxPen);
+                " FROM transaksi_penjualan AS tp JOIN detail_penjualan AS dp ON tp.id_transaksi_penjualan = dp.id_transaksi_penjualan JOIN supplier AS sup ON sup.id_supplier = tp.id_supplier JOIN petugas AS pet ON pet.id_petugas = tp.id_petugas JOIN produk ON produk.id_produk = tp.id_produk JOIN transaksi_supplier AS ts ON ts.id_transaksi_supplier = dp.id_transaksi_supplier LIMIT 5;", dgvTrxPen);
             cmbSupp();
             cmbPetugas();
             cmbProd();
@@ -111,7 +111,7 @@ namespace cashier
                 con.query("DELETE FROM transaksi_penjualan WHERE `transaksi_penjualan`.`id_transaksi_penjualan` =" + idTrx);
                 //con.query("DELETE FROM detail_supplier WHERE `detail_supplier`.`id_detail_supplier` =" + idSup);
                 con.tampil("SELECT tp.id_transaksi_penjualan AS idTrx, dp.id_detail_penjualan, tp.tanggal AS Tanggal, pet.username AS NamaPetugas, sup.nama AS NamaSupplier, produk.nama AS NamaProduk, dp.harga_jual AS Harga, dp.stok_terjual AS Terjual, dp.total_penjualan AS Total, tp.keuntungan AS Keuntungan, tp.status AS Status" +
-                " FROM transaksi_penjualan AS tp JOIN detail_penjualan AS dp ON tp.id_transaksi_penjualan = dp.id_transaksi_penjualan JOIN supplier AS sup ON sup.id_supplier = tp.id_supplier JOIN petugas AS pet ON pet.id_petugas = tp.id_petugas JOIN produk ON produk.id_produk = tp.id_produk JOIN transaksi_supplier AS ts ON ts.id_transaksi_supplier = dp.id_transaksi_supplier;", dgvTrxPen);
+                " FROM transaksi_penjualan AS tp JOIN detail_penjualan AS dp ON tp.id_transaksi_penjualan = dp.id_transaksi_penjualan JOIN supplier AS sup ON sup.id_supplier = tp.id_supplier JOIN petugas AS pet ON pet.id_petugas = tp.id_petugas JOIN produk ON produk.id_produk = tp.id_produk JOIN transaksi_supplier AS ts ON ts.id_transaksi_supplier = dp.id_transaksi_supplier LIMIT 5;", dgvTrxPen);
                 MessageBox.Show("Data Berhasil Dihapus", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (dialogResult == DialogResult.No)
@@ -159,7 +159,7 @@ namespace cashier
                 con.kosongkanText(this);
                 //MessageBox.Show("UNTUNG KANTIN: "+untungKantin + "\n Total : " + total + "\n UNTUNG SUPPLIER : " + untungSupplier);
                 con.tampil("SELECT tp.id_transaksi_penjualan AS idTrx, dp.id_detail_penjualan, tp.tanggal AS Tanggal, pet.username AS NamaPetugas, sup.nama AS NamaSupplier, produk.nama AS NamaProduk, dp.harga_jual AS Harga, dp.stok_terjual AS Terjual, dp.total_penjualan AS Total, tp.keuntungan AS Keuntungan, tp.status AS Status" +
-                    " FROM transaksi_penjualan AS tp JOIN detail_penjualan AS dp ON tp.id_transaksi_penjualan = dp.id_transaksi_penjualan JOIN supplier AS sup ON sup.id_supplier = tp.id_supplier JOIN petugas AS pet ON pet.id_petugas = tp.id_petugas JOIN produk ON produk.id_produk = tp.id_produk JOIN transaksi_supplier AS ts ON ts.id_transaksi_supplier = dp.id_transaksi_supplier;", dgvTrxPen);
+                    " FROM transaksi_penjualan AS tp JOIN detail_penjualan AS dp ON tp.id_transaksi_penjualan = dp.id_transaksi_penjualan JOIN supplier AS sup ON sup.id_supplier = tp.id_supplier JOIN petugas AS pet ON pet.id_petugas = tp.id_petugas JOIN produk ON produk.id_produk = tp.id_produk JOIN transaksi_supplier AS ts ON ts.id_transaksi_supplier = dp.id_transaksi_supplier LIMIT 5;", dgvTrxPen);
             }
 
         }
@@ -195,7 +195,7 @@ namespace cashier
                 con.kosongkanText(this);
 
                 con.tampil("SELECT tp.id_transaksi_penjualan AS idTrx, dp.id_detail_penjualan, tp.tanggal AS Tanggal, pet.username AS NamaPetugas, sup.nama AS NamaSupplier, produk.nama AS NamaProduk, dp.harga_jual AS Harga, dp.stok_terjual AS Terjual, dp.total_penjualan AS Total, tp.keuntungan AS Keuntungan, tp.status AS Status" +
-                    " FROM transaksi_penjualan AS tp JOIN detail_penjualan AS dp ON tp.id_transaksi_penjualan = dp.id_transaksi_penjualan JOIN supplier AS sup ON sup.id_supplier = tp.id_supplier JOIN petugas AS pet ON pet.id_petugas = tp.id_petugas JOIN produk ON produk.id_produk = tp.id_produk JOIN transaksi_supplier AS ts ON ts.id_transaksi_supplier = dp.id_transaksi_supplier;", dgvTrxPen);
+                    " FROM transaksi_penjualan AS tp JOIN detail_penjualan AS dp ON tp.id_transaksi_penjualan = dp.id_transaksi_penjualan JOIN supplier AS sup ON sup.id_supplier = tp.id_supplier JOIN petugas AS pet ON pet.id_petugas = tp.id_petugas JOIN produk ON produk.id_produk = tp.id_produk JOIN transaksi_supplier AS ts ON ts.id_transaksi_supplier = dp.id_transaksi_supplier LIMIT 5;", dgvTrxPen);
 
 
                 
