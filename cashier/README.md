@@ -14,6 +14,7 @@ This project aims to create a desktop application that helps the canteen staff a
 6. Create Database kantinv2
 7. Click Import -> Select file ``kantinv2.sql`` -> Go
 8. Open & Run ``setup.exe``
+9. Done
 
 Notes : Run XAMPP or Laragon before opening this application.
 
